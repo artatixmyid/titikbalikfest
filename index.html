@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#210005">
+<meta name="description" content="Titik Balik — 30 Januari 2027, Graha Cakrawala Malang.">
+<title>Titik Balik — 30 Januari 2027</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+:root{
+  --bg:#120003;
+  --bg2:#210006;
+  --panel:#1b0508;
+  --gold:#d8b65a;
+  --gold2:#f0d783;
+  --text:#f6eee9;
+  --muted:#bdaeb0;
+  --line:rgba(216,182,90,.22);
+  --radius:14px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:#080002;
+  color:var(--text);
+  font-family:Inter,Arial,sans-serif;
+  overflow-x:hidden;
+}
+a{text-decoration:none;color:inherit}
+button{font:inherit}
+
+.page{
+  width:min(100%,430px);
+  margin:auto;
+  min-height:100vh;
+  background:
+    radial-gradient(circle at 50% 8%,rgba(135,0,20,.28),transparent 28%),
+    linear-gradient(180deg,#220006 0%,#110003 38%,#090002 100%);
+  position:relative;
+  box-shadow:0 0 60px rgba(0,0,0,.65);
+}
+
+.page:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  opacity:.28;
+  background:
+    repeating-radial-gradient(ellipse at 10% 0%,transparent 0 34px,rgba(164,0,30,.15) 35px 36px,transparent 37px 60px);
+  mask-image:linear-gradient(#000,transparent 32%);
+}
+
+header{
+  min-height:72px;
+  padding:16px 18px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  position:relative;
+  z-index:2;
+}
+
+.brand{
+  font-family:Cinzel,serif;
+  color:var(--gold2);
+  letter-spacing:1.5px;
+  font-size:13px;
+  font-weight:700;
+}
+
+.menu{
+  width:34px;
+  height:34px;
+  border:0;
+  background:transparent;
+  color:#eee;
+  font-size:22px;
+  cursor:pointer;
+}
+
+.hero{
+  text-align:center;
+  padding:32px 20px 64px;
+  position:relative;
+  z-index:1;
+}
+
+.logo{
+  width:min(230px,70%);
+  max-height:120px;
+  object-fit:contain;
+  margin:0 auto 18px;
+  display:block;
+  filter:drop-shadow(0 5px 12px rgba(0,0,0,.45));
+}
+
+.fallback-title{
+  display:none;
+  font-family:Cinzel,serif;
+  color:var(--gold2);
+  font-size:43px;
+  line-height:.88;
+  letter-spacing:-1px;
+  margin-bottom:18px;
+}
+
+.eyebrow{
+  font-family:Cinzel,serif;
+  color:#e4d8d0;
+  font-size:11px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-bottom:15px;
+}
+
+.date{
+  color:var(--gold2);
+  font-family:Cinzel,serif;
+  font-weight:700;
+  font-size:17px;
+  letter-spacing:1.3px;
+  margin-bottom:4px;
+}
+
+.venue{
+  color:#d7c4c4;
+  font-size:11px;
+  letter-spacing:1.4px;
+  margin-bottom:20px;
+}
+
+.countdown{
+  display:flex;
+  justify-content:center;
+  gap:7px;
+  margin:0 auto 22px;
+}
+
+.timebox{
+  width:66px;
+  padding:8px 4px 7px;
+  border:1px solid var(--line);
+  border-radius:9px;
+  background:rgba(0,0,0,.22);
+}
+
+.timebox strong{
+  display:block;
+  color:var(--gold2);
+  font-family:Cinzel,serif;
+  font-size:18px;
+  line-height:1;
+}
+
+.timebox span{
+  display:block;
+  margin-top:5px;
+  font-size:8px;
+  color:#9d8e90;
+  letter-spacing:1px;
+}
+
+.cta-small{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:150px;
+  padding:11px 18px;
+  border-radius:999px;
+  background:linear-gradient(135deg,#e4c55f,#b7922f);
+  color:#351d00;
+  font-weight:800;
+  font-size:10px;
+  letter-spacing:.7px;
+  box-shadow:0 7px 22px rgba(216,182,90,.18);
+}
+
+section{
+  padding:52px 20px;
+  position:relative;
+  z-index:1;
+}
+
+.section-title{
+  text-align:center;
+  color:var(--gold2);
+  font-family:Cinzel,serif;
+  font-size:19px;
+  margin-bottom:10px;
+}
+
+.section-subtitle{
+  text-align:center;
+  color:var(--muted);
+  font-size:9px;
+  line-height:1.7;
+  max-width:320px;
+  margin:0 auto 25px;
+}
+
+.guests{
+  display:grid;
+  gap:10px;
+}
+
+.guest-card{
+  position:relative;
+  overflow:hidden;
+  height:174px;
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,.08);
+  background:#2a0a0f;
+  box-shadow:0 10px 25px rgba(0,0,0,.28);
+}
+
+.guest-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transition:transform .45s ease;
+}
+
+.guest-card:hover img{transform:scale(1.04)}
+
+.guest-card:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,transparent 38%,rgba(9,0,2,.88) 100%);
+}
+
+.guest-name{
+  position:absolute;
+  z-index:2;
+  bottom:16px;
+  left:0;
+  right:0;
+  text-align:center;
+  color:#fff;
+  font-family:Cinzel,serif;
+  font-weight:700;
+  font-size:11px;
+  letter-spacing:1px;
+}
+
+.links{
+  display:grid;
+  gap:8px;
+}
+
+.link-card{
+  min-height:48px;
+  border:1px solid rgba(216,182,90,.18);
+  border-radius:10px;
+  background:linear-gradient(90deg,rgba(50,10,15,.72),rgba(15,1,4,.8));
+  display:flex;
+  align-items:center;
+  gap:11px;
+  padding:8px 12px;
+}
+
+.link-icon{
+  width:30px;
+  height:30px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  color:var(--gold2);
+  border:1px solid var(--line);
+  flex:0 0 30px;
+  font-size:13px;
+}
+
+.link-copy{
+  min-width:0;
+  flex:1;
+}
+
+.link-copy strong{
+  display:block;
+  color:#eee2dc;
+  font-size:10px;
+  margin-bottom:2px;
+}
+
+.link-copy span{
+  display:block;
+  color:#927f83;
+  font-size:8px;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+.arrow{
+  color:var(--gold);
+  font-size:18px;
+}
+
+.ticket{
+  border:1px solid rgba(216,182,90,.2);
+  border-radius:12px;
+  padding:15px 14px;
+  background:rgba(30,5,9,.72);
+  margin-top:10px;
+}
+
+.ticket strong{
+  color:var(--gold2);
+  font-size:10px;
+}
+
+.ticket p{
+  color:#a9979a;
+  font-size:8px;
+  line-height:1.6;
+  margin:4px 0 9px;
+}
+
+.badges{
+  display:flex;
+  gap:6px;
+  flex-wrap:wrap;
+}
+
+.badge{
+  border:1px solid rgba(216,182,90,.2);
+  color:#cbb9a5;
+  padding:5px 8px;
+  border-radius:999px;
+  font-size:7px;
+}
+
+.location{
+  text-align:center;
+}
+
+.address{
+  color:#eee3df;
+  font-family:Cinzel,serif;
+  font-size:10px;
+  line-height:1.7;
+  margin-bottom:16px;
+}
+
+.map{
+  width:100%;
+  aspect-ratio:1.35;
+  object-fit:cover;
+  display:block;
+  border-radius:9px;
+  border:1px solid rgba(255,255,255,.1);
+  background:#ddd;
+}
+
+.map-button{
+  display:inline-flex;
+  margin-top:12px;
+  border:1px solid var(--line);
+  padding:9px 15px;
+  border-radius:999px;
+  color:var(--gold2);
+  font-size:9px;
+}
+
+footer{
+  padding:35px 20px 105px;
+  text-align:center;
+  border-top:1px solid rgba(255,255,255,.04);
+}
+
+.footer-logo{
+  width:105px;
+  max-height:70px;
+  object-fit:contain;
+  margin:0 auto 10px;
+}
+
+footer p{
+  color:#766568;
+  font-size:7px;
+  line-height:1.8;
+}
+
+.floating-register{
+  position:fixed;
+  z-index:50;
+  left:50%;
+  bottom:18px;
+  transform:translateX(-50%);
+  width:min(360px,calc(100vw - 38px));
+  height:54px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:999px;
+  background:linear-gradient(135deg,#f0d783 0%,#c39c36 100%);
+  color:#2a1500;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:1.2px;
+  box-shadow:0 10px 35px rgba(0,0,0,.5),0 4px 20px rgba(216,182,90,.2);
+}
+
+.top{
+  position:fixed;
+  z-index:49;
+  right:16px;
+  bottom:82px;
+  width:35px;
+  height:35px;
+  border-radius:50%;
+  border:1px solid var(--line);
+  background:#241016;
+  color:var(--gold2);
+  cursor:pointer;
+  font-size:15px;
+}
+
+@media (min-width:700px){
+  body{padding:20px 0}
+  .page{border-radius:20px;overflow:hidden}
+}
+</style>
+</head>
+
+<body>
+<main class="page">
+
+  <header>
+    <div class="brand">TITIK BALIK</div>
+    <button class="menu" aria-label="Menu">☰</button>
+  </header>
+
+  <section class="hero" id="home">
+    <img class="logo" src="logo.png" alt="Titik Balik" onerror="this.style.display='none';document.querySelector('.fallback-title').style.display='block'">
+    <div class="fallback-title">TITIK<br>BALIK</div>
+
+    <p class="eyebrow">Dari Keluarga, Untuk Kita</p>
+    <div class="date">30 JANUARI 2027</div>
+    <div class="venue">GRAHA CAKRAWALA MALANG</div>
+
+    <div class="countdown" aria-label="Countdown acara">
+      <div class="timebox"><strong id="days">000</strong><span>HARI</span></div>
+      <div class="timebox"><strong id="hours">00</strong><span>JAM</span></div>
+      <div class="timebox"><strong id="minutes">00</strong><span>MENIT</span></div>
+      <div class="timebox"><strong id="seconds">00</strong><span>DETIK</span></div>
+    </div>
+
+    <a class="cta-small" href="form.html">✦ BELI TIKET DISINI</a>
+  </section>
+
+  <section id="guest-stars">
+    <h2 class="section-title">Guest Stars</h2>
+    <p class="section-subtitle">Hadirin dan sahabat yang akan merayakan perjalanan sekaligus menjadi bagian dari malam yang berkesan.</p>
+
+    <div class="guests">
+      <article class="guest-card">
+        <img src="reza-artamivia.jpg" alt="Reza Artamivia">
+        <div class="guest-name">REZA ARTAMIVIA</div>
+      </article>
+
+      <article class="guest-card">
+        <img src="kahitna.jpg" alt="Kahitna">
+        <div class="guest-name">KAHITNA</div>
+      </article>
+
+      <article class="guest-card">
+        <img src="astrid.jpg" alt="Astrid">
+        <div class="guest-name">ASTRID</div>
+      </article>
+
+      <article class="guest-card">
+        <img src="element.jpg" alt="Element">
+        <div class="guest-name">ELEMENT</div>
+      </article>
+    </div>
+  </section>
+
+  <section id="official">
+    <h2 class="section-title">Tautan Resmi</h2>
+    <p class="section-subtitle">Ikuti informasi terbaru, pembelian tiket, dan kanal resmi acara.</p>
+
+    <div class="links">
+      <a class="link-card" href="#" target="_blank" rel="noopener">
+        <div class="link-icon">◎</div>
+        <div class="link-copy"><strong>Instagram</strong><span>@titiktbalik</span></div>
+        <div class="arrow">›</div>
+      </a>
+
+      <a class="link-card" href="#" target="_blank" rel="noopener">
+        <div class="link-icon">♪</div>
+        <div class="link-copy"><strong>TikTok</strong><span>@titiktbalik</span></div>
+        <div class="arrow">›</div>
+      </a>
+
+      <a class="link-card" href="mailto:halo@titiktbalik.id">
+        <div class="link-icon">✉</div>
+        <div class="link-copy"><strong>Email Official</strong><span>halo@titiktbalik.id</span></div>
+        <div class="arrow">›</div>
+      </a>
+
+      <a class="link-card" href="#" target="_blank" rel="noopener">
+        <div class="link-icon">●</div>
+        <div class="link-copy"><strong>Playlist Spotify</strong><span>Dengarkan soundtrack acara</span></div>
+        <div class="arrow">›</div>
+      </a>
+    </div>
+
+    <div class="ticket">
+      <strong>Pembelian Tiket</strong>
+      <p>Gunakan tombol pendaftaran untuk melanjutkan proses pembelian dan mendapatkan informasi tiket terbaru.</p>
+      <div class="badges">
+        <span class="badge">REGULER</span>
+        <span class="badge">VIP</span>
+        <span class="badge">INFO TIKET</span>
+      </div>
+    </div>
+
+    <div class="ticket">
+      <strong>Pendaftaran Volunteer</strong>
+      <p>Ingin menjadi bagian dari acara? Hubungi panitia melalui kanal resmi.</p>
+      <div class="badges"><span class="badge">OPEN REGISTRATION</span></div>
+    </div>
+  </section>
+
+  <section class="location" id="location">
+    <h2 class="section-title">Lokasi</h2>
+    <p class="address">GRAHA CAKRAWALA<br>UNIVERSITAS NEGERI MALANG</p>
+
+    <img class="map" src="map.jpg" alt="Peta lokasi Graha Cakrawala Universitas Negeri Malang">
+    <a class="map-button" href="https://www.google.com/maps/search/?api=1&query=Graha+Cakrawala+Universitas+Negeri+Malang" target="_blank" rel="noopener">BUKA DI MAPS ↗</a>
+  </section>
+
+  <footer>
+    <img class="footer-logo" src="logo.png" alt="Titik Balik" onerror="this.style.display='none'">
+    <p>© 2027 Titik Balik. Seluruh informasi pada halaman ini dapat diperbarui oleh panitia.</p>
+    <p>Designed for mobile experience.</p>
+  </footer>
+
+</main>
+
+<a class="floating-register" href="form.html">DAFTAR SEKARANG</a>
+<button class="top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Kembali ke atas">↑</button>
+
+<script>
+const target = new Date("2027-01-30T19:00:00+07:00").getTime();
+
+function updateCountdown(){
+  const now = Date.now();
+  let diff = target - now;
+
+  if(diff <= 0){
+    document.getElementById("days").textContent = "000";
+    document.getElementById("hours").textContent = "00";
+    document.getElementById("minutes").textContent = "00";
+    document.getElementById("seconds").textContent = "00";
+    return;
+  }
+
+  const days = Math.floor(diff / 86400000);
+  diff %= 86400000;
+  const hours = Math.floor(diff / 3600000);
+  diff %= 3600000;
+  const minutes = Math.floor(diff / 60000);
+  const seconds = Math.floor((diff % 60000) / 1000);
+
+  document.getElementById("days").textContent = String(days).padStart(3,"0");
+  document.getElementById("hours").textContent = String(hours).padStart(2,"0");
+  document.getElementById("minutes").textContent = String(minutes).padStart(2,"0");
+  document.getElementById("seconds").textContent = String(seconds).padStart(2,"0");
+}
+
+updateCountdown();
+setInterval(updateCountdown,1000);
+</script>
+</body>
+</html>
