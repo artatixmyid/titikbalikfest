@@ -41,11 +41,11 @@ button{font-family:inherit}
 .progress-track{height:4px;background:rgba(255,255,255,.18);border-radius:99px;overflow:hidden;margin-bottom:12px}
 .progress-fill{height:100%;background:#fff;border-radius:99px;width:100%}
 .steps{list-style:none;display:flex;align-items:center;gap:8px}
-.step{display:flex;align-items:center;gap:8px;flex:1;justify-content:center}
+.step{display:flex;align-items:center;gap:8px;flex:1;justify-content:center;min-width:0}
 .dot{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-weight:700;font-size:13px;color:#fff;border:2px solid rgba(255,255,255,.55);flex:none}
 .step.done .dot{background:rgba(255,255,255,.18);border-color:rgba(255,255,255,.4)}
 .step.active .dot{background:#fff;color:var(--navy);border-color:#fff}
-.step-label{color:#fff;font-weight:600;font-size:12.5px;white-space:nowrap}
+.step-label{color:#fff;font-weight:600;font-size:12.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 main{padding-bottom:44px}
 .hero{display:flex;flex-direction:column;align-items:center;text-align:center;padding:38px 16px 8px}
 .mark-wrap{width:88px;height:88px;border-radius:50%;background:var(--green-bg);display:grid;place-items:center;box-shadow:0 0 0 10px rgba(14,159,86,.08);animation:pop .45s cubic-bezier(.2,.9,.3,1.4) backwards}
@@ -105,13 +105,17 @@ main{padding-bottom:44px}
 .footer-glow{position:absolute;border-radius:50%;pointer-events:none;filter:blur(2px);z-index:-1}
 .footer-glow-a{width:260px;height:260px;right:-130px;top:-80px;background:radial-gradient(circle,rgba(65,101,255,.28),transparent 68%)}
 .footer-glow-b{width:220px;height:220px;left:-130px;bottom:0;background:radial-gradient(circle,rgba(0,199,255,.13),transparent 68%)}
-.footer-shell{position:relative;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:21px 15px 16px;border:1px solid rgba(120,148,226,.28);border-radius:22px;background:linear-gradient(145deg,rgba(5,14,39,.98),rgba(11,27,64,.98) 55%,rgba(13,31,70,.98)),radial-gradient(circle at 80% 0%,rgba(71,109,239,.18),transparent 40%);box-shadow:0 24px 70px rgba(5,17,48,.22),inset 0 1px 0 rgba(255,255,255,.09)}
+.footer-shell{position:relative;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:21px 15px 16px;border:1px solid rgba(120,148,226,.28);border-radius:22px;background:linear-gradient(145deg,rgba(5,14,39,.98),rgba(11,27,64,.98) 55%,rgba(13,31,70,.98)),radial-gradient(circle at 80% 0%,rgba(71,109,239,.18),transparent 40%);box-shadow:0 24px 70px rgba(5,17,48,.22),inset 0 1px 0 rgba(255,255,255,.09),inset 0 -46px 90px -46px rgba(64,98,255,.30)}
+.footer-edge{position:absolute;top:0;left:12%;right:12%;height:1px;z-index:2;background:linear-gradient(90deg,transparent,rgba(140,168,255,.8) 28%,rgba(255,255,255,.95) 50%,rgba(140,168,255,.8) 72%,transparent);pointer-events:none}
 .footer-shell::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.34;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:26px 26px;-webkit-mask-image:linear-gradient(to bottom,black,transparent 88%);mask-image:linear-gradient(to bottom,black,transparent 88%)}
 .footer-shell::after{content:"";position:absolute;width:420px;height:120px;left:22%;bottom:-105px;border-radius:50%;background:rgba(67,83,224,.18);filter:blur(28px);pointer-events:none}
-.footer-main,.footer-panel{position:relative;z-index:1}
+.footer-main,.footer-panel{position:relative;z-index:1;min-width:0}
 .footer-main{grid-column:1/-1}
-.footer-brand{display:inline-flex;align-items:center;gap:9px;min-height:48px;padding:7px 14px 7px 8px;border:1px solid rgba(255,255,255,.12);border-radius:15px;background:linear-gradient(135deg,rgba(255,255,255,.09),rgba(255,255,255,.035));box-shadow:inset 0 1px 0 rgba(255,255,255,.1),0 10px 25px rgba(0,0,0,.14)}
+.footer-brand-row{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.footer-brand{display:inline-flex;align-items:center;gap:9px;min-height:48px;padding:7px 14px 7px 8px;border:1px solid rgba(255,255,255,.12);border-radius:15px;background:linear-gradient(135deg,rgba(255,255,255,.09),rgba(255,255,255,.035));box-shadow:inset 0 1px 0 rgba(255,255,255,.1),0 10px 25px rgba(0,0,0,.14);text-decoration:none;transition:transform .2s ease}
 .footer-brand img{width:150px;height:auto;max-height:39px;object-fit:contain;mix-blend-mode:screen}
+.footer-badge{display:inline-flex;align-items:center;gap:6px;padding:6px 11px;border:1px solid rgba(98,228,170,.32);border-radius:999px;background:linear-gradient(135deg,rgba(98,228,170,.14),rgba(98,228,170,.04));color:#8df0bd;font-size:8.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.footer-badge svg{width:11px;height:11px;fill:none;stroke:currentColor;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
 .footer-brand-mark{display:grid;grid-template-columns:repeat(3,5px);align-items:end;gap:3px;width:20px;height:20px}
 .footer-brand-mark span{display:block;border-radius:3px;background:linear-gradient(180deg,#89a6ff,#315fe8);box-shadow:0 0 12px rgba(75,115,255,.55)}
 .footer-brand-mark span:nth-child(1){height:9px}
@@ -121,30 +125,40 @@ main{padding-bottom:44px}
 .footer-kicker i{width:6px;height:6px;border-radius:50%;background:#62e4aa;box-shadow:0 0 0 4px rgba(98,228,170,.08),0 0 14px rgba(98,228,170,.45)}
 .footer-tagline{max-width:330px;margin:10px 0 0;color:#aebddc;font-size:11px;line-height:1.72;font-weight:500}
 .footer-trust{display:flex;flex-wrap:wrap;gap:6px;margin-top:15px}
-.footer-trust span{display:inline-flex;align-items:center;gap:5px;padding:6px 8px;border:1px solid rgba(129,157,226,.14);border-radius:999px;background:rgba(255,255,255,.035);color:#8195bc;font-size:8px;font-weight:700}
-.footer-trust b{color:#68dda8;font-size:10px}
-.footer-panel{min-width:0;padding:13px 11px;border:1px solid rgba(116,143,213,.13);border-radius:17px;background:rgba(255,255,255,.025)}
+.footer-trust span{display:inline-flex;align-items:center;gap:6px;padding:6px 9px;border:1px solid rgba(129,157,226,.14);border-radius:999px;background:rgba(255,255,255,.035);color:#8195bc;font-size:8px;font-weight:700}
+.footer-trust b{display:inline-grid;place-items:center;width:14px;height:14px;border-radius:50%;background:rgba(98,228,170,.14);color:#68dda8;font-size:9px;box-shadow:0 0 10px rgba(98,228,170,.22)}
+.footer-panel{padding:13px 11px;border:1px solid rgba(116,143,213,.13);border-radius:17px;background:rgba(255,255,255,.025);transition:border-color .2s ease,background .2s ease}
 .footer-label{display:block;margin:0 0 12px;color:#6f86b8;font-size:8px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
 .footer-links,.footer-support{display:flex;flex-direction:column;align-items:flex-start;gap:8px}
-.footer-links a,.footer-support a{display:flex;align-items:center;gap:8px;width:100%;color:#dce6ff;font-size:10.5px;font-weight:600;transition:color .2s ease,transform .2s ease}
-.footer-links a:hover,.footer-support a:hover{color:#fff;transform:translateX(3px)}
-.footer-arrow{display:grid;place-items:center;width:22px;height:22px;flex:0 0 22px;border:1px solid rgba(125,151,221,.17);border-radius:7px;background:rgba(255,255,255,.04);color:#7e9be6;font-size:11px}
-.f-ico{display:grid;place-items:center;width:25px;height:25px;flex:0 0 25px;border:1px solid rgba(125,151,221,.17);border-radius:8px;background:rgba(255,255,255,.04);color:#8fa9ef}
+.footer-links a,.footer-support a:not(.footer-cs){display:flex;align-items:center;gap:8px;width:100%;color:#dce6ff;font-size:10.5px;font-weight:600;text-decoration:none;transition:color .2s ease,transform .2s ease}
+.footer-links a:hover,.footer-support a:not(.footer-cs):hover{color:#fff;transform:translateX(3px)}
+.footer-arrow{display:grid;place-items:center;width:22px;height:22px;flex:0 0 22px;border:1px solid rgba(125,151,221,.17);border-radius:7px;background:rgba(255,255,255,.04);color:#7e9be6;font-size:11px;transition:background .2s ease,border-color .2s ease,color .2s ease}
+.f-ico{display:grid;place-items:center;width:25px;height:25px;flex:0 0 25px;border:1px solid rgba(125,151,221,.17);border-radius:8px;background:rgba(255,255,255,.04);color:#8fa9ef;transition:background .2s ease,border-color .2s ease,color .2s ease}
 .f-ico svg{width:13px;height:13px}
+a.footer-cs{display:flex;align-items:center;gap:10px;width:100%;padding:10px 11px;border:1px solid rgba(98,228,170,.30);border-radius:14px;background:linear-gradient(135deg,rgba(98,228,170,.10),rgba(98,228,170,.03));text-decoration:none;transition:border-color .2s ease,background .2s ease}
+a.footer-cs .f-ico{border-color:rgba(98,228,170,.30);background:rgba(98,228,170,.08);color:#7fe6ae}
+.footer-cs-body{min-width:0;display:grid;gap:2px}
+.footer-cs-label{font-size:8px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#6fd8a8}
+.footer-cs-number{font-size:14px;font-weight:800;letter-spacing:.03em;line-height:1.25;color:#fff}
 .footer-live{display:flex;align-items:center;gap:7px;margin-top:7px;padding-top:9px;width:100%;border-top:1px solid rgba(255,255,255,.07);color:#7185ac;font-size:8px;font-weight:700}
 .footer-live i{width:6px;height:6px;border-radius:50%;background:#61e0a4;box-shadow:0 0 0 4px rgba(97,224,164,.08),0 0 10px rgba(97,224,164,.35)}
-.footer-bottom{position:relative;z-index:1;display:flex;flex-direction:column;align-items:flex-start;gap:8px;padding:15px 5px 0;color:#65789f;font-size:8px;font-weight:600}
-.footer-bottom>div{display:flex;align-items:center;gap:7px}
-.footer-bottom strong{color:#8ea6df;font-size:8px;letter-spacing:.1em}
-.footer-flow{display:inline-flex;align-items:center;flex-wrap:wrap;gap:5px;font-size:7px;letter-spacing:.05em;line-height:1.6}
-.footer-flow span{color:#4f6899;font-weight:800}
-.footer-flow b{color:#5774b5}
+@keyframes livePulse{0%,100%{box-shadow:0 0 0 4px rgba(97,224,164,.10),0 0 10px rgba(97,224,164,.35)}50%{box-shadow:0 0 0 7px rgba(97,224,164,.04),0 0 16px rgba(97,224,164,.55)}}
+.footer-kicker i,.footer-live i{animation:livePulse 2.4s ease-in-out infinite}
+.footer-bottom{position:relative;z-index:1;padding:14px 5px 0;text-align:center}
+.footer-bottom::before{content:"";display:block;height:1px;margin:0 10% 12px;background:linear-gradient(90deg,transparent,rgba(125,151,221,.25),transparent)}
+.footer-bottom p{margin:0;color:#65789f;font-size:9px;font-weight:600;letter-spacing:.03em;line-height:1.8}
+.footer-bottom strong{color:#8ea6df;font-weight:800;letter-spacing:.08em}
+.footer-brand:hover{transform:translateY(-1px)}
+.footer-panel:hover{border-color:rgba(125,152,224,.30);background:rgba(255,255,255,.045)}
+a.footer-cs:hover{border-color:rgba(98,228,170,.5);background:linear-gradient(135deg,rgba(98,228,170,.16),rgba(98,228,170,.06))}
+.footer-links a:hover .footer-arrow,.footer-support a:not(.footer-cs):hover .f-ico{background:rgba(255,255,255,.12);border-color:rgba(125,151,221,.38);color:#aac4ff}
 @media (max-width:390px){
 .footer-shell{grid-template-columns:1fr}
 .footer-main{grid-column:auto}
 .footer-trust span{font-size:7.5px}
+.footer-cs-number{font-size:13px}
 }
-@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.mark-circle,.mark-check{stroke-dashoffset:0}}
 </style>
 </head>
 <body>
@@ -180,18 +194,20 @@ main{padding-bottom:44px}
 <a class="btn btn-wa" id="waBtn" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.3 7.6L3 21l1.9-5.7A8.5 8.5 0 1 1 21 11.5Z"/></svg>Konfirmasi via WhatsApp</a>
 <button class="btn btn-home" id="homeBtn" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg>Kembali ke Beranda</button>
 </div>
-<p class="help">Butuh bantuan? Hubungi <a href="tel:+6282137676220">+62 821-3767-6220</a> atau <a href="mailto:cs@artatix.co.id">cs@artatix.co.id</a></p>
+<p class="help">Butuh bantuan? Hubungi <a href="tel:+6282385613854">+62 823-8561-3854</a> atau <a href="mailto:cs@artatix.co.id">cs@artatix.co.id</a></p>
 <footer class="footer" aria-label="Informasi Artatix">
 <div class="footer-glow footer-glow-a" aria-hidden="true"></div>
 <div class="footer-glow footer-glow-b" aria-hidden="true"></div>
 <div class="footer-shell">
+<span class="footer-edge" aria-hidden="true"></span>
 <div class="footer-main">
+<div class="footer-brand-row">
 <a class="footer-brand" href="index.html" aria-label="Artatix — kembali ke beranda">
-<span class="footer-brand-mark" aria-hidden="true">
-<span></span><span></span><span></span>
-</span>
+<span class="footer-brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
 <img src="logo-saya.png" alt="Artatix" width="150" height="39" loading="lazy" decoding="async">
 </a>
+<span class="footer-badge"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg> Tiket Resmi</span>
+</div>
 <div class="footer-kicker"><i aria-hidden="true"></i> PREMIUM TICKETING EXPERIENCE</div>
 <p class="footer-tagline">Platform pemesanan tiket yang dibuat untuk checkout lebih cepat, rapi, dan nyaman.</p>
 <div class="footer-trust" aria-label="Keunggulan layanan">
@@ -208,14 +224,19 @@ main{padding-bottom:44px}
 </div>
 <div class="footer-panel footer-support">
 <span class="footer-label">Pusat Bantuan</span>
-<a href="tel:+6282137676220"><span class="f-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.85 21 3 13.15 3 3a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.24.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2Z"/></svg></span><span>+62 821-3767-6220</span></a>
+<a class="footer-cs" href="tel:+6282385613854">
+<span class="f-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.85 21 3 13.15 3 3a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.24.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2Z"/></svg></span>
+<span class="footer-cs-body">
+<span class="footer-cs-label">Customer Service Artatix</span>
+<strong class="footer-cs-number">+62 823-8561-3854</strong>
+</span>
+</a>
 <a href="mailto:cs@artatix.co.id"><span class="f-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><span>cs@artatix.co.id</span></a>
 <div class="footer-live"><i aria-hidden="true"></i><span>Layanan bantuan tersedia</span></div>
 </div>
 </div>
 <div class="footer-bottom">
-<div><strong>ARTATIX</strong><span>© 2026 · Hak Cipta Dilindungi.</span></div>
-<span class="footer-flow"><span>FLOW</span> INDEX <b>→</b> TIKET <b>→</b> FORM <b>→</b> QRIS <b>→</b> SUCCESS</span>
+<p>© 2026 <strong>Artatix</strong> · Hak cipta dilindungi · Platform tiket resmi TITIK BALIK FESTIVAL 2027</p>
 </div>
 </footer>
 </main>
@@ -226,7 +247,7 @@ main{padding-bottom:44px}
   'use strict';
   const KEY = { order: 'gf_order_v1', orderId: 'gf_order_id', payment: 'gf_payment_v1' };
   const CLEANUP = ['gf_checkout_items_v1', 'gf_draft_v1', 'gf_payment_deadline'];
-  const WA_CS = '6282137676220';
+  const WA_CS = '6282385613854';
 
   const $ = id => document.getElementById(id);
   const nf = new Intl.NumberFormat('id-ID');
@@ -313,6 +334,7 @@ main{padding-bottom:44px}
   };
 
   const copyBtn = $('copyOrder');
+  let copiedTimer = null;
   copyBtn.addEventListener('click', async () => {
     let ok = false;
     try {
@@ -322,7 +344,8 @@ main{padding-bottom:44px}
     if (ok) {
       notify('Order ID berhasil disalin');
       copyBtn.classList.add('copied');
-      setTimeout(() => copyBtn.classList.remove('copied'), 1400);
+      clearTimeout(copiedTimer);
+      copiedTimer = setTimeout(() => copyBtn.classList.remove('copied'), 1400);
     } else {
       notify('Gagal menyalin Order ID');
     }
