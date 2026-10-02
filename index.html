@@ -39,7 +39,7 @@
     "image":["https://artatixmyid.github.io/titikbalikfest/banner.png"],
     "description":"TITIK BALIK FESTIVAL 2027 adalah konser musik yang menghadirkan set list early 2000 dengan tema \"Apa Titik Balikmu?\".",
     "organizer":{"@type":"Organization","name":"Titik Balik Festival"},
-    "offers":{"@type":"Offer","price":"250000","priceCurrency":"IDR","availability":"https://schema.org/InStock","url":"https://artatixmyid.github.io/titikbalikfest/tiket.html"}
+    "offers":{"@type":"Offer","price":"175000","priceCurrency":"IDR","availability":"https://schema.org/InStock","url":"https://artatixmyid.github.io/titikbalikfest/tiket.html"}
   }
   </script>
 
@@ -332,19 +332,27 @@
     .description p{margin:0 0 14px;font-size:16.5px;line-height:1.75;color:var(--ink-soft)}
     .description p:last-child{margin-bottom:0}
 
-    /* Syarat & ketentuan */
-    .terms{margin:0;padding:0;list-style:none;display:grid;gap:20px;counter-reset:term}
+    /* ===== KARTU INFORMASI (Venue Layout — sesuai gambar) ===== */
+    .informasi{
+      margin-top:28px;
+      padding:20px 18px;
+      background:#eef1fc;
+      border-radius:22px;
+    }
+    .informasi-title{margin:0 0 14px;font-size:20px;font-weight:700;color:var(--ink)}
+    .informasi img{width:100%;height:auto;border-radius:16px}
+
+    /* Syarat & ketentuan — daftar bernomor polos 1–18 (sesuai gambar) */
+    .terms{margin:0;padding:0;list-style:none;display:grid;gap:18px;counter-reset:term}
     .terms>li{
       position:relative;padding-left:32px;counter-increment:term;
-      font-size:16px;line-height:1.7;color:var(--ink-soft);
+      font-size:16px;line-height:1.75;color:var(--ink-soft);
     }
     .terms>li::before{
-      content:counter(term);position:absolute;left:0;top:0;
-      font-size:16px;font-weight:700;color:var(--ink);
+      content:counter(term) ".";position:absolute;left:0;top:0;
+      font-size:16px;font-weight:400;color:var(--ink-soft);
     }
-    .terms>li>strong{display:block;margin-bottom:4px;font-size:16px;font-weight:700;color:var(--ink)}
-    .terms ul{margin:6px 0 0;padding-left:18px;list-style:disc}
-    .terms ul>li{margin:4px 0;font-size:15.5px;line-height:1.7;color:var(--ink-soft)}
+    .terms>li p{margin:12px 0 0}
 
     .agreement{
       margin-top:26px;font-size:12px;font-weight:600;line-height:1.9;
@@ -588,39 +596,69 @@
         <div class="description">
           <p>TITIK BALIK FESTIVAL 2027 adalah konser musik yang menghadirkan set list early 2000. TITIK BALIK FESTIVAL mengusung tema "Apa Titik Balikmu?" dimana setiap individu memiliki kisah "from nothing to everything", dimana menjadi momen krusial ketika seseorang sudah menjadi pribadi yang sudah lebih matang dan terarah. TITIK BALIK FESTIVAL menargetkan audience di seluruh kalangan, dengan target utama dari kalangan Gen Millenials dan Middle Up, karena kebanyakan dari kalangan tersebut sudah melalui masa krusial di kehidupannya masing-masing. TITIK BALIK FESTIVAL memberikan ruang untuk setiap individu untuk mengenang momen terbaik di setiap proses kehidupannya melalui set list dari line up yang kita hadirkan.</p>
         </div>
+
+        <!-- Kartu Informasi — Venue Layout (sesuai gambar) -->
+        <div class="informasi">
+          <h3 class="informasi-title">Informasi</h3>
+          <img src="layout.jpg" alt="Venue Layout TITIK BALIK FESTIVAL 2027 — Stage, VIP Seating, VIP Standing, dan Festival Tribun Seating" width="800" height="800" loading="lazy" decoding="async">
+        </div>
       </section>
 
       <section id="syarat" class="content-section" data-panel>
         <h2>Syarat &amp; Ketentuan</h2>
         <ol class="terms">
-          <li><strong>Pembelian Entry Pass</strong><ul><li>Entry Pass yang valid adalah yang dibeli melalui <strong>artatix.co.id</strong>.</li></ul></li>
-          <li><strong>Ketentuan Entry Pass</strong><ul><li>Satu Entry Pass berlaku untuk satu orang.</li></ul></li>
-          <li><strong>Pembelian melalui pihak tidak resmi</strong><ul><li>Panitia dan Promotor tidak bertanggung jawab atas kerugian akibat pembelian tiket melalui calo, website/platform yang bukan merupakan mitra resmi penjualan tiket TITIK BALIK FESTIVAL 2027.</li></ul></li>
-          <li><strong>Tiket hilang atau dicuri</strong><ul><li>Tiket yang hilang atau dicuri tidak akan diganti atau diterbitkan ulang. Keamanan tiket menjadi tanggung jawab pemegang tiket.</li></ul></li>
-          <li><strong>Pembatalan atau perubahan acara</strong><ul><li>Panitia acara, promotor, dan pengisi acara tidak bertanggung jawab atas biaya transportasi atau akomodasi penonton apabila acara dibatalkan atau dipindahkan ke hari, tanggal, atau waktu lain.</li></ul></li>
-          <li><strong>Keadaan luar biasa</strong><ul><li>Dalam keadaan seperti bencana alam, kerusuhan, perang, wabah, atau keadaan darurat yang diumumkan pemerintah, penyelenggara/promotor berhak membatalkan dan/atau mengubah waktu acara serta tata letak tempat tanpa pemberitahuan sebelumnya.</li></ul></li>
-          <li><strong>Perubahan teknis acara</strong><ul><li>Panitia/penyelenggara/promotor berhak mengubah waktu acara, tata letak tempat, dan kapasitas penonton tanpa pemberitahuan sebelumnya.</li></ul></li>
-          <li><strong>Pengembalian dana</strong><ul><li>Jika acara dibatalkan, promotor akan mengembalikan uang pembelian tiket sesuai mekanisme dan waktu yang ditentukan promotor.</li><li>Biaya bank, biaya lain-lain, dan pembayaran lain yang mungkin dikenakan untuk proses pengembalian uang dapat menjadi tanggungan pelanggan.</li></ul></li>
-          <li><strong>Kehilangan barang dan cedera</strong><ul><li>Panitia acara, penyelenggara, promotor, dan pengisi acara tidak bertanggung jawab atas kehilangan barang pribadi penonton maupun kejadian yang mengakibatkan cedera di area acara selama acara berlangsung.</li></ul></li>
-          <li><strong>Dokumen saat masuk</strong><ul><li>Penonton diharapkan membawa kartu ID asli dan e-ticket dari Artatix.co.id saat melakukan penukaran/pemeriksaan tiket.</li></ul></li>
-          <li><strong>Transportasi</strong><ul><li>Penonton disarankan menggunakan transportasi online saat datang ke GRAHA CAKRAWALA UM.</li></ul></li>
-          <li><strong>Hak promotor terkait Entry Pass</strong><ul><li>Promotor berhak melarang penonton masuk apabila Entry Pass telah digunakan oleh orang lain.</li><li>Promotor berhak melarang penonton masuk apabila Entry Pass yang digunakan tidak valid.</li><li>Promotor berhak mengambil tindakan hukum terhadap pihak yang memperoleh atau menggunakan Entry Pass secara tidak sah, termasuk pemalsuan atau penggandaan.</li></ul></li>
-          <li><strong>Protokol kesehatan</strong><ul><li>Penyelenggara berhak mengambil tindakan dan mengeluarkan pengunjung dari GRAHA CAKRAWALA UM apabila tidak mematuhi protokol kesehatan yang telah ditetapkan.</li></ul></li>
-          <li><strong>Barang yang diperbolehkan</strong><ul><li>Kartu identitas dan uang pribadi.</li><li>Bukti tiket/tanda masuk.</li><li>Masker dan hand sanitizer.</li><li>Obat-obatan pribadi.</li><li>Jas hujan.</li><li>Handphone/perangkat lainnya.</li></ul></li>
-          <li><strong>Barang yang tidak diperbolehkan</strong><ul><li>Atribut/benda yang berkaitan dengan kelompok sepak bola, politik, dan agama.</li><li>Makanan dan minuman dari luar.</li><li>Kamera profesional seperti kamera dengan lensa besar, SLR, atau DSLR.</li><li>Tongsis/selfie stick.</li><li>Minuman beralkohol, obat-obatan terlarang, dan psikotropika.</li><li>Senjata tajam, senjata api, benda berbahaya, serta benda yang dilarang berdasarkan peraturan perundang-undangan.</li><li>Gas dan benda yang mudah terbakar.</li><li>Tas atau ransel berukuran besar.</li><li>Laser dan pointer.</li><li>Rokok, vape, rokok elektronik, dan sejenisnya.</li><li>Barang yang berpotensi digunakan untuk menyakiti orang lain.</li></ul></li>
-          <li><strong>Penyitaan barang terlarang</strong><ul><li>Pihak promotor/penyelenggara berhak mengambil/menyita benda terlarang dan tidak mengembalikannya kepada pengunjung apabila ditemukan saat pemeriksaan barang.</li></ul></li>
-          <li><strong>Larangan merokok dan kerusuhan</strong><ul><li>Dilarang merokok di dalam area Graha Cakrawala UM.</li><li>Dilarang membuat kerusuhan dalam bentuk apa pun di dalam area Graha Cakrawala UM.</li></ul></li>
+          <li>Entry Pass yang valid adalah yang dibeli melalui artatix.co.id</li>
+          <li>Satu Entry Pass berlaku untuk satu orang.</li>
+          <li>Panitia dan Promotor tidak bertanggung jawab/tidak ada penggantian kerugian atas pembelian tiket acara melalui calo/tempat/kanal/platform/yang bukan mitra resmi penjualan tiket "TITIK BALIK FESTIVAL 2027".</li>
+          <li>Tiket yang hilang/dicuri tidak akan diganti atau diterbitkan ulang. Meskipun anda memiliki bukti pembelian. Tiket kalian merupakan tanggung jawab kalian.</li>
+          <li>Panitia acara, Promotor, dan Pengisi Acara tidak bertanggung jawab atas biaya transportasi atau akomodasi yang telah dikeluarkan penonton untuk mengunjungi acara jika seandainya acara harus dibatalkan atau dipindahkan ke hari dan/atau waktu lain.</li>
+          <li>Dalam keadaan-keadaan kahar seperti bencana alam, kerusuhan, perang, wabah, dan semua keadaan darurat yang diumumkan secara resmi oleh Pemerintah. Panitia/penyelenggara/promotor berhak untuk membatalkan dan/atau merubah waktu acara dan tata letak tempat tanpa pemberitahuan sebelumnya.</li>
+          <li>Panitia/Penyelenggara/Promotor berhak untuk, merevisi waktu acara, tata letak tempat dan kapasitas penonton tanpa pemberitahuan sebelumnya.</li>
+          <li>Jika acara dibatalkan, Promotor harus mengembalikan uang pembelian tiket yang sudah dibeli dengan jangka waktu yang akan diinfokan lebih lanjut oleh Promotor, tetapi akan dipotong biaya bank, biaya lain-lain dan pembayaran lain yang mungkin dikenakan untuk mentransfer uang kembali ke pelanggan.</li>
+          <li>Panitia acara/penanggung jawab tempat acara, promotor, dan pengisi acara tidak bertanggung jawab atas hilangnya barang-barang pribadi para penonton atau kejadian-kejadian yang mengakibatkan cedera di semua area acara selama acara berlangsung, apapun alasannya.</li>
+          <li>Harap membawa kartu ID asli dan e-Ticket dari artatix.co.id saat melakukan penukaran tiket.</li>
+          <li>Kami menyarankan agar para penonton menggunakan transportasi online saat datang ke GRAHA CAKRAWALA UM.</li>
+          <li>Promotor berhak untuk:
+            <p>Melarang penonton masuk jika Entry Pass telah digunakan oleh orang lain.</p>
+            <p>Melarang penonton masuk ke area GRAHA CAKRAWALA UM jika Entry Pass yang digunakan tidak valid.</p>
+            <p>Memproses atau mengajukan hukuman, baik perdata maupun pidana, terhadap pengunjung yang mendapatkan Entry Pass secara tidak sah, termasuk ditemukannya memalsukan dan menggandakan Entry Pass yang sah atau memperoleh Entry Pass dengan cara yang tidak sesuai dengan prosedur.</p>
+          </li>
+          <li>Penyelenggara mengambil tindakan tegas, dan berhak mengeluarkan pengunjung dari GRAHA CAKRAWALA UM jika tidak mematuhi protokol kesehatan yang telah diterapkan.</li>
+          <li>Barang yang boleh dibawa kedalam venue:
+            <p>Membawa kartu identitas dan uang pribadi</p>
+            <p>Membawa bukti tiket/tanda masuk</p>
+            <p>Membawa masker dan hand sanitizer</p>
+            <p>Membawa obat-obatan pribadi</p>
+            <p>Membawa jas hujan</p>
+            <p>Membawa handphone / perangkat lainnya</p>
+          </li>
+          <li>Barang yang tidak diperbolehkan dibawa kedalam GRAHA CAKRAWALA UM:
+            <p>Tidak membawa atribut/bendera/identitas dari kelompok sepak bola, politik, ras dan agama</p>
+            <p>Makanan dan minuman dari luar ke dalam GRAHA CAKRAWALA UM.</p>
+            <p>Kamera profesional seperti Drone, SLR, DSLR.</p>
+            <p>Tongsis atau Selfie Stick.</p>
+            <p>Minuman beralkohol, obat-obatan terlarang, psikotropika, atau barang yang mengandung zat berbahaya lainnya.</p>
+            <p>Senjata tajam/api, bahan peledak, dan benda-benda yang dilarang menurut ketentuan peraturan perundang-undangan yang berlaku.</p>
+            <p>Cairan dan benda yang mudah terbakar.</p>
+            <p>Tas atau ransel berukuran besar.</p>
+            <p>Laser dan pointer.</p>
+            <p>Rokok, vape, rokok elektrok dan lain sejenisnya</p>
+            <p>Barang yang berbahaya untuk orang lain maupun diri sendiri walaupun tidak disebutkan pada peraturan diatas.</p>
+          </li>
+          <li>Pihak promotor/penyelenggara acara berhak mengambil, menyita dan tidak mengembalikan kepada penonton jika ditemukannya barang terlarang saat pengecekan barang.</li>
+          <li>Dilarang merokok di dalam area GRAHA CAKRAWALA UM.</li>
+          <li>Dilarang membuat kerusuhan dalam situasi apapun di dalam area GRAHA CAKRAWALA UM.</li>
         </ol>
 
         <div class="agreement">
-          SAYA TELAH MEMBACA DAN MEMAHAMI SYARAT DAN KETENTUAN PEMBELIAN DAN PENGGUNAAN TIKET DI ATAS. DAN JIKA ADA PERUBAHAN ATURAN PROMOTOR, AKAN SEGERA DIINFORMASIKAN DI AKUN MEDIA SOSIAL PROMOTOR.
+          SAYA TELAH MEMBACA DAN MEMAHAMI SYARAT DAN KETENTUAN PEMBELIAN DAN PENGGUNAAN ENTRY PASS DIATAS. DAN JIKA ADA PERUBAHAN ATURAN PROMOTOR, AKAN SEGERA DIINFORMASIKAN DI AKUN MEDIA SOSIAL PROMOTOR
           <br><br>
-          DAN SAYA MEMBERIKAN PERSETUJUAN SAYA UNTUK TERIKAT SECARA HUKUM DENGAN SYARAT DAN KETENTUAN INI.
+          DAN SAYA MEMBERIKAN PERSETUJUAN SAYA UNTUK DIKONTRAKKAN SECARA HUKUM DENGAN SYARAT DAN KETENTUAN.
         </div>
       </section>
 
-      <section id="talent" class="content-section" data-panel aria-label="Talent">
-        <h2 class="sr-only">Talent</h2>
+      <section id="talent" class="content-section" data-panel>
+        <h2>Talent</h2>
         <div class="talent-list">
           <div class="talent-row">
             <img src="reza.jpg" alt="Reza Artamevia" width="58" height="58" loading="lazy" decoding="async">
@@ -685,7 +723,7 @@
     <div class="sticky-card">
       <div class="sticky-row">
         <span class="purchase-label">Harga mulai dari</span>
-        <strong class="purchase-price">Rp250.000</strong>
+        <strong class="purchase-price">Rp175.000</strong>
       </div>
       <a class="buy" href="tiket.html" aria-label="Pesan tiket TITIK BALIK FESTIVAL 2027">Pesan Sekarang</a>
     </div>
@@ -749,6 +787,7 @@
         [".detail", "Detail Acara"],
         [".organizer", "Penyelenggara"],
         [".description p", "Deskripsi"],
+        [".informasi-title", "Informasi"],
         [".terms > li", "Syarat & Ketentuan"],
         [".talent-row", "Talent"],
         [".facility", "Fasilitas"]
