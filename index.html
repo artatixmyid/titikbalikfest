@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <title>TITIK BALIK FESTIVAL 2027 | Artatix</title>
-  <meta name="theme-color" content="#0a1231">
+  <title>TITIK BALIK FESTIVAL 2027 (VIP Standing & Festival Tribune Tickets) | Artatix</title>
+  <meta name="theme-color" content="#2b4acf">
   <meta name="color-scheme" content="light">
   <meta name="description" content="TITIK BALIK FESTIVAL 2027 — 30 Januari 2027, 15:00–23:00 di Graha Cakrawala Universitas Negeri Malang, Kota Malang, Jawa Timur.">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Artatix">
-  <meta property="og:title" content="TITIK BALIK FESTIVAL 2027">
+  <meta property="og:title" content="TITIK BALIK FESTIVAL 2027 (VIP Standing & Festival Tribune Tickets)">
   <meta property="og:description" content="30 Januari 2027, 15:00–23:00 di Graha Cakrawala Universitas Negeri Malang.">
   <meta property="og:image" content="banner.png">
   <meta property="og:image:alt" content="TITIK BALIK FESTIVAL 2027">
@@ -18,13 +18,13 @@
   <link rel="apple-touch-icon" href="logo-saya.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"Event",
-    "name":"TITIK BALIK FESTIVAL 2027",
+    "name":"TITIK BALIK FESTIVAL 2027 (VIP Standing & Festival Tribune Tickets)",
     "startDate":"2027-01-30T15:00:00+07:00",
     "endDate":"2027-01-30T23:00:00+07:00",
     "eventStatus":"https://schema.org/EventScheduled",
@@ -32,37 +32,26 @@
     "location":{
       "@type":"Place",
       "name":"Graha Cakrawala Universitas Negeri Malang",
-      "address":{
-        "@type":"PostalAddress",
-        "addressLocality":"Kota Malang",
-        "addressRegion":"Jawa Timur",
-        "addressCountry":"ID"
-      }
+      "address":{"@type":"PostalAddress","addressLocality":"Kota Malang","addressRegion":"Jawa Timur","addressCountry":"ID"}
     },
     "image":["banner.png"],
-    "description":"TITIK BALIK FESTIVAL 2027 dengan tema perjalanan dan titik balik kehidupan melalui musik dan pengalaman festival.",
+    "description":"TITIK BALIK FESTIVAL 2027 adalah konser musik yang menghadirkan set list early 2000 dengan tema \"Apa Titik Balikmu?\".",
     "organizer":{"@type":"Organization","name":"Titik Balik Festival"},
-    "offers":{
-      "@type":"Offer",
-      "price":"250000",
-      "priceCurrency":"IDR",
-      "availability":"https://schema.org/InStock",
-      "url":"tiket.html"
-    }
+    "offers":{"@type":"Offer","price":"175000","priceCurrency":"IDR","availability":"https://schema.org/InStock","url":"tiket.html"}
   }
   </script>
 
   <style>
     :root{
-      --brand:#12358f;
-      --brand-2:#1a40a8;
-      --ink:#1c2333;
-      --ink-strong:#141b31;
-      --ink-soft:#3a4356;
-      --muted:#7e8799;
-      --line:#e8ecf4;
-      --chip:#eef2fb;
-      --bg:#eef1f6;
+      --brand:#2b4acf;
+      --brand-deep:#2340bd;
+      --ink:#111827;
+      --ink-soft:#1f2937;
+      --muted:#8a91a5;
+      --line:#e7eaf1;
+      --tint:#dfe6fc;
+      --tint-2:#e9edfd;
+      --fac:#3d6df4;
     }
 
     *,*::before,*::after{box-sizing:border-box}
@@ -70,9 +59,10 @@
     body{
       margin:0;
       min-height:100vh;
-      background:var(--bg);
+      background:#eef1f6;
       color:var(--ink);
-      font-family:"Poppins",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+      font-family:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+      font-size:16px;
       line-height:1.6;
       -webkit-font-smoothing:antialiased;
       -webkit-tap-highlight-color:transparent;
@@ -81,11 +71,8 @@
     img{display:block;max-width:100%;height:auto}
     a{color:inherit;text-decoration:none}
     button{font:inherit}
-    a:focus-visible,button:focus-visible{
-      outline:2px solid var(--brand);
-      outline-offset:3px;
-      border-radius:8px;
-    }
+    a:focus-visible,button:focus-visible{outline:2px solid var(--brand);outline-offset:3px;border-radius:8px}
+    .sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 
     .page{
       width:100%;
@@ -93,1059 +80,333 @@
       min-height:100vh;
       margin:0 auto;
       background:#fff;
-      box-shadow:0 0 40px rgba(18,53,143,.08);
-      animation:pageIn .35s ease both;
-    }
-    @keyframes pageIn{
-      from{opacity:0;transform:translateY(8px)}
-      to{opacity:1;transform:none}
+      box-shadow:0 0 40px rgba(18,45,143,.08);
     }
 
+    /* ===== HEADER (biru solid, tombol solid — sesuai gambar) ===== */
     .topbar{
-      position:sticky;
-      top:0;
+      position:relative;
       z-index:50;
-      padding:calc(8px + env(safe-area-inset-top,0px)) 16px 10px;
+      padding:16px 16px 14px;
       color:#fff;
-      background:
-        radial-gradient(130% 170% at 88% -30%,rgba(96,140,255,.42),transparent 55%),
-        radial-gradient(120% 160% at -12% 135%,rgba(41,98,255,.38),transparent 60%),
-        linear-gradient(135deg,#0a1231 0%,#12358f 78%,#1a40a8 100%);
-      box-shadow:0 12px 32px -14px rgba(7,15,40,.55);
-    }
-    .topbar::after{
-      content:"";
-      position:absolute;
-      left:0;right:0;bottom:0;
-      height:1px;
-      background:linear-gradient(90deg,transparent,rgba(255,255,255,.38) 50%,transparent);
-      pointer-events:none;
+      background:var(--brand);
     }
     .topbar-inner{
-      width:100%;
       max-width:480px;
       margin:0 auto;
-    }
-    .topbar-row{
       display:flex;
       align-items:center;
       justify-content:space-between;
       gap:12px;
-      min-height:40px;
     }
-    .topbar-actions{display:flex;align-items:center;gap:8px}
     .brand{display:inline-flex;align-items:center;border-radius:10px}
     .brand img{
       width:auto;
-      height:25px;
+      height:28px;
       mix-blend-mode:screen;
       filter:drop-shadow(0 2px 8px rgba(255,255,255,.22));
     }
+    .topbar-actions{display:flex;align-items:center;gap:10px}
     .lang{
-      display:inline-flex;
-      align-items:center;
-      gap:7px;
-      padding:6px 12px;
-      border-radius:999px;
-      font-size:12px;
-      font-weight:600;
-      letter-spacing:.4px;
-      color:#fff;
-      background:rgba(255,255,255,.12);
-      border:1px solid rgba(255,255,255,.22);
-      -webkit-backdrop-filter:blur(10px);
-      backdrop-filter:blur(10px);
+      display:inline-flex;align-items:center;gap:9px;
+      padding:10px 18px;border-radius:999px;
+      background:rgba(255,255,255,.14);
+      font-size:14px;font-weight:700;color:#fff;
+    }
+    .flag{
+      width:21px;height:21px;border-radius:50%;
+      background:linear-gradient(180deg,#eb4d4b 0 50%,#fff 50% 100%);
+      box-shadow:inset 0 0 0 1px rgba(0,0,0,.06);
     }
     .icon-btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      width:38px;height:38px;
-      border:1px solid rgba(255,255,255,.22);
-      border-radius:11px;
-      background:rgba(255,255,255,.12);
-      color:#fff;
-      cursor:pointer;
-      -webkit-backdrop-filter:blur(10px);
-      backdrop-filter:blur(10px);
+      display:inline-flex;align-items:center;justify-content:center;
+      width:42px;height:42px;
+      border:0;border-radius:50%;
+      background:rgba(255,255,255,.14);
+      color:#fff;cursor:pointer;
       transition:background .15s ease,transform .15s ease;
     }
     .icon-btn:active{transform:scale(.93)}
-    .icon-btn svg{
-      width:17px;height:17px;
-      fill:none;
-      stroke:currentColor;
-      stroke-width:2;
-      stroke-linecap:round;
-      stroke-linejoin:round;
-    }
-    .topbar .icon-btn:focus-visible,
-    .topbar .brand:focus-visible,
-    .menu-drawer a:focus-visible,
-    .menu-drawer button:focus-visible,
-    .footer a:focus-visible{outline-color:#fff}
-    .hamburger .bars{position:relative;display:block;width:16px;height:12px}
+    .icon-btn svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+    .topbar .icon-btn:focus-visible,.topbar .brand:focus-visible{outline-color:#fff}
+    .hamburger .bars{position:relative;display:block;width:17px;height:13px}
     .hamburger .bars>span{
-      position:absolute;
-      left:0;
-      width:100%;height:2px;
-      border-radius:2px;
-      background:#fff;
+      position:absolute;left:0;width:100%;height:2px;border-radius:2px;background:#fff;
       transition:top .28s ease,transform .28s ease,opacity .18s ease;
     }
     .hamburger .bars>span:nth-child(1){top:0}
-    .hamburger .bars>span:nth-child(2){top:5px}
-    .hamburger .bars>span:nth-child(3){top:10px}
-    .hamburger[aria-expanded="true"] .bars>span:nth-child(1){top:5px;transform:rotate(45deg)}
+    .hamburger .bars>span:nth-child(2){top:5.5px}
+    .hamburger .bars>span:nth-child(3){top:11px}
+    .hamburger[aria-expanded="true"] .bars>span:nth-child(1){top:5.5px;transform:rotate(45deg)}
     .hamburger[aria-expanded="true"] .bars>span:nth-child(2){opacity:0}
-    .hamburger[aria-expanded="true"] .bars>span:nth-child(3){top:5px;transform:rotate(-45deg)}
+    .hamburger[aria-expanded="true"] .bars>span:nth-child(3){top:5.5px;transform:rotate(-45deg)}
 
-    .search-panel{display:none;padding-top:12px}
+    /* Panel pencarian */
+    .search-panel{display:none;padding-top:12px;max-width:480px;margin:0 auto}
     .search-panel.open{display:block;animation:panelIn .22s ease both}
-    @keyframes panelIn{
-      from{opacity:0;transform:translateY(-6px)}
-      to{opacity:1;transform:none}
-    }
+    @keyframes panelIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
     .search-box{
-      display:flex;
-      align-items:center;
-      gap:9px;
-      padding:0 12px;
-      background:#fff;
-      border-radius:12px;
+      display:flex;align-items:center;gap:9px;
+      padding:0 12px;background:#fff;border-radius:12px;
       box-shadow:0 6px 18px rgba(5,15,40,.25);
-      transition:box-shadow .15s ease;
     }
     .search-box:focus-within{box-shadow:0 6px 18px rgba(5,15,40,.25),0 0 0 2px rgba(255,255,255,.55)}
-    .search-box>svg{
-      flex:0 0 16px;
-      width:16px;height:16px;
-      fill:none;
-      stroke:#8a94a8;
-      stroke-width:2;
-      stroke-linecap:round;
-    }
-    .search-box input{
-      flex:1;
-      min-width:0;
-      border:0;
-      outline:none;
-      background:transparent;
-      padding:11px 0;
-      font:inherit;
-      font-size:13.5px;
-      color:var(--ink);
-    }
+    .search-box>svg{flex:0 0 16px;width:16px;height:16px;fill:none;stroke:#8a94a8;stroke-width:2;stroke-linecap:round}
+    .search-box input{flex:1;min-width:0;border:0;outline:none;background:transparent;padding:12px 0;font:inherit;font-size:14px;color:var(--ink)}
     .search-box input::placeholder{color:#9aa3b5}
     .search-box input::-webkit-search-cancel-button{-webkit-appearance:none;appearance:none}
     .search-clear{
-      flex:0 0 22px;
-      width:22px;height:22px;
-      border:0;
-      border-radius:50%;
-      background:var(--chip);
-      color:#66708a;
-      font-size:12px;
-      line-height:1;
-      display:grid;
-      place-items:center;
-      cursor:pointer;
+      flex:0 0 22px;width:22px;height:22px;border:0;border-radius:50%;
+      background:var(--tint-2);color:var(--brand);font-size:12px;line-height:1;
+      display:grid;place-items:center;cursor:pointer;
     }
     .search-clear[hidden]{display:none}
     .search-results{
-      display:none;
-      margin-top:9px;
-      max-height:min(300px,52vh);
-      overflow-y:auto;
-      background:#fff;
-      border-radius:14px;
-      box-shadow:0 14px 34px rgba(5,15,40,.28);
+      display:none;margin-top:9px;max-height:min(300px,52vh);overflow-y:auto;
+      background:#fff;border-radius:14px;box-shadow:0 14px 34px rgba(5,15,40,.28);
     }
     .search-results.open{display:block}
     .sr-item{
-      display:flex;
-      align-items:flex-start;
-      gap:9px;
-      width:100%;
-      padding:10px 13px;
-      border:0;
-      background:#fff;
-      text-align:left;
-      cursor:pointer;
+      display:flex;align-items:flex-start;gap:9px;width:100%;
+      padding:10px 13px;border:0;background:#fff;text-align:left;cursor:pointer;
       transition:background .12s ease;
     }
     .sr-item+.sr-item{border-top:1px solid var(--line)}
     .sr-item:hover{background:#f6f8fd}
     .sr-badge{
-      flex:0 0 auto;
-      margin-top:2px;
-      padding:3px 8px;
-      border-radius:999px;
-      background:var(--chip);
-      color:var(--brand);
-      font-size:9px;
-      font-weight:700;
-      letter-spacing:.04em;
-      text-transform:uppercase;
+      flex:0 0 auto;margin-top:2px;padding:3px 8px;border-radius:999px;
+      background:var(--tint-2);color:var(--brand);
+      font-size:9px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;
     }
     .sr-text{min-width:0;font-size:12px;line-height:1.6;color:var(--ink-soft)}
-    .sr-text mark{padding:0 1px;border-radius:3px;background:rgba(26,64,168,.14);color:var(--brand)}
+    .sr-text mark{padding:0 1px;border-radius:3px;background:rgba(43,74,207,.14);color:var(--brand)}
     .sr-empty{padding:13px 14px;font-size:11.5px;color:var(--muted)}
     .sr-more{padding:10px 14px;border-top:1px solid var(--line);font-size:10.5px;color:var(--muted)}
-    .search-hit{
-      outline:3px solid rgba(26,64,168,.7);
-      outline-offset:3px;
-      animation:hitFlash 1.6s ease forwards;
-    }
-    @keyframes hitFlash{
-      from{outline-color:rgba(26,64,168,.7)}
-      to{outline-color:transparent}
-    }
+    .search-hit{outline:3px solid rgba(43,74,207,.7);outline-offset:3px;animation:hitFlash 1.6s ease forwards}
+    @keyframes hitFlash{from{outline-color:rgba(43,74,207,.7)}to{outline-color:transparent}}
 
+    /* ===== DRAWER MENU ===== */
     .menu-backdrop{
-      position:fixed;
-      inset:0;
-      z-index:60;
+      position:fixed;inset:0;z-index:60;
       background:rgba(7,13,33,.55);
-      -webkit-backdrop-filter:blur(3px);
-      backdrop-filter:blur(3px);
-      opacity:0;
-      visibility:hidden;
-      pointer-events:none;
+      -webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);
+      opacity:0;visibility:hidden;pointer-events:none;
       transition:opacity .28s ease,visibility 0s linear .28s;
     }
     .menu-backdrop.open{opacity:1;visibility:visible;pointer-events:auto;transition:opacity .28s ease}
     .menu-drawer{
-      position:fixed;
-      top:0;bottom:0;
+      position:fixed;top:0;bottom:0;
       right:max(0px,calc(50% - 240px));
-      z-index:70;
-      display:flex;
-      flex-direction:column;
+      z-index:70;display:flex;flex-direction:column;
       width:min(320px,88vw);
       padding:calc(14px + env(safe-area-inset-top,0px)) 18px calc(18px + env(safe-area-inset-bottom,0px));
-      overflow-y:auto;
-      color:#e9efff;
+      overflow-y:auto;color:#e9efff;
       background:
         radial-gradient(120% 90% at 100% 0%,rgba(90,130,255,.25),transparent 55%),
         linear-gradient(160deg,#0a1231 0%,#0e1d47 60%,#101f49 100%);
       box-shadow:-18px 0 50px rgba(5,15,40,.45);
-      transform:translateX(105%);
-      visibility:hidden;
+      transform:translateX(105%);visibility:hidden;
       transition:transform .32s cubic-bezier(.22,.85,.3,1),visibility 0s linear .32s;
     }
-    .menu-drawer.open{
-      transform:none;
-      visibility:visible;
-      transition:transform .32s cubic-bezier(.22,.85,.3,1);
-    }
-    .menu-head{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:10px;
-      padding-bottom:14px;
-      border-bottom:1px solid rgba(255,255,255,.1);
-    }
+    .menu-drawer.open{transform:none;visibility:visible;transition:transform .32s cubic-bezier(.22,.85,.3,1)}
+    .menu-head{display:flex;align-items:center;justify-content:space-between;gap:10px;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,.1)}
+    .menu-head .brand img{height:26px}
     .menu-cta{
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      gap:8px;
-      min-height:46px;
-      margin:16px 0 4px;
-      border-radius:12px;
-      background:linear-gradient(180deg,var(--brand-2),var(--brand));
-      color:#fff;
-      font-size:13.5px;
-      font-weight:700;
-      box-shadow:0 10px 24px rgba(18,53,143,.4);
+      display:flex;align-items:center;justify-content:center;gap:8px;
+      min-height:46px;margin:16px 0 4px;border-radius:12px;
+      background:linear-gradient(180deg,#3a5be0,var(--brand));
+      color:#fff;font-size:13.5px;font-weight:700;
+      box-shadow:0 10px 24px rgba(43,74,207,.4);
       transition:transform .15s ease;
     }
     .menu-cta:active{transform:scale(.97)}
     .menu-group{margin-top:16px}
-    .menu-label{
-      display:block;
-      margin:0 0 8px;
-      font-size:8.5px;
-      font-weight:800;
-      letter-spacing:.16em;
-      text-transform:uppercase;
-      color:#6f86b8;
-    }
+    .menu-label{display:block;margin:0 0 8px;font-size:8.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#6f86b8}
     .menu-nav{display:flex;flex-direction:column;gap:4px}
     .menu-nav a{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      padding:10px 11px;
-      border-radius:12px;
-      color:#dce6ff;
-      font-size:13px;
-      font-weight:600;
+      display:flex;align-items:center;gap:10px;padding:10px 11px;border-radius:12px;
+      color:#dce6ff;font-size:13px;font-weight:600;
       transition:background .15s ease,color .15s ease;
     }
     .menu-nav a:hover{background:rgba(255,255,255,.07);color:#fff}
-    .menu-foot{
-      margin-top:auto;
-      padding-top:18px;
-      border-top:1px solid rgba(255,255,255,.1);
-      font-size:10px;
-      font-weight:600;
-      letter-spacing:.04em;
-      color:#7185ac;
-    }
+    .menu-foot{margin-top:auto;padding-top:18px;border-top:1px solid rgba(255,255,255,.1);font-size:10px;font-weight:600;letter-spacing:.04em;color:#7185ac}
+    .menu-drawer a:focus-visible,.menu-drawer button:focus-visible{outline-color:#fff}
 
-    .hero{background:var(--brand)}
+    /* ===== HERO BANNER ===== */
+    .hero{background:#1a0505}
     .banner{width:100%;height:auto}
 
-    .content{padding:18px 16px 132px}
+    /* ===== KONTEN ===== */
+    .content{padding:20px 20px 190px}
 
     .badge{
-      display:inline-flex;
-      align-items:center;
-      gap:6px;
-      padding:5px 12px;
-      border-radius:999px;
-      background:var(--chip);
-      color:var(--brand);
-      font-size:12px;
-      font-weight:600;
+      display:inline-flex;align-items:center;gap:8px;
+      padding:10px 18px;border-radius:999px;
+      background:var(--tint-2);color:var(--brand);
+      font-size:15px;font-weight:600;
     }
+    .badge svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
     .title{
-      margin:12px 0 2px;
-      font-size:23px;
-      font-weight:800;
-      line-height:1.35;
-      color:var(--ink-strong);
-    }
-    .label{
-      margin:24px 0 10px;
-      font-size:11px;
-      font-weight:700;
-      letter-spacing:.1em;
-      text-transform:uppercase;
-      color:var(--muted);
+      margin:16px 0 0;
+      font-size:25px;line-height:1.32;font-weight:700;
+      letter-spacing:-.01em;color:var(--ink);
     }
 
-    .detail{
-      display:flex;
-      align-items:center;
-      gap:12px;
-      padding:7px 0;
-    }
+    .section-title{margin:28px 0 14px;font-size:22px;font-weight:700;color:var(--ink)}
+    .label{margin:30px 0 14px;font-size:17px;font-weight:500;color:var(--muted)}
+
+    .detail{display:flex;align-items:center;gap:16px;padding:10px 0}
     .detail-icon{
-      flex:0 0 36px;
-      width:36px;
-      height:36px;
-      border-radius:10px;
-      background:var(--chip);
-      color:var(--brand);
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      box-shadow:inset 0 0 0 1px rgba(18,53,143,.07);
+      flex:0 0 46px;width:46px;height:46px;
+      border-radius:14px;background:var(--tint);color:var(--brand);
+      display:inline-flex;align-items:center;justify-content:center;
     }
-    .detail-text{font-size:14px;font-weight:500;color:var(--ink-soft)}
-    .detail-icon svg,.social-icon svg{
-      width:18px;height:18px;
-      fill:none;
-      stroke:currentColor;
-      stroke-width:2;
-      stroke-linecap:round;
-      stroke-linejoin:round;
-    }
+    .detail-icon.round{border-radius:50%}
+    .detail-icon svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+    .detail-text{font-size:16px;font-weight:500;color:var(--ink-soft);line-height:1.5}
 
-    .organizer{
-      display:flex;
-      align-items:center;
-      gap:12px;
-      padding:12px 14px;
-      border:1px solid var(--line);
-      border-radius:14px;
-      background:#fbfcff;
-    }
-    .organizer img{
-      width:44px;height:44px;
-      border-radius:50%;
-      object-fit:cover;
-    }
-    .organizer strong{font-size:14px;font-weight:600;color:var(--ink)}
+    .organizer{display:flex;align-items:center;gap:14px}
+    .organizer img{width:46px;height:46px;object-fit:contain}
+    .organizer strong{font-size:17px;font-weight:600;color:var(--ink)}
 
-    .social{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .social{display:flex;flex-wrap:wrap;gap:12px}
     .social-item{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      min-width:0;
-      padding:8px 14px 8px 8px;
-      border:1px solid var(--line);
-      border-radius:999px;
-      background:#fbfcff;
-      font-size:13px;
-      font-weight:600;
-      color:var(--ink-soft);
-      transition:transform .15s ease,box-shadow .15s ease;
+      display:inline-flex;align-items:center;gap:12px;
+      padding:6px 22px 6px 6px;border-radius:999px;
+      background:var(--tint-2);color:var(--brand);
+      font-size:16px;font-weight:600;
+      transition:transform .15s ease;
     }
     .social-item:active{transform:scale(.97)}
     .social-icon{
-      flex:0 0 36px;
-      width:36px;height:36px;
-      border-radius:50%;
-      color:#fff;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
+      width:38px;height:38px;border-radius:50%;
+      background:var(--brand);color:#fff;
+      display:inline-flex;align-items:center;justify-content:center;
     }
-    .social-instagram{
-      background:linear-gradient(45deg,rgba(240,148,51,.10),rgba(188,24,136,.12));
-      border-color:rgba(188,24,136,.30);
-      color:#c13584;
-    }
-    .social-instagram .social-icon{
-      background:linear-gradient(45deg,#f09433,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888);
-    }
-    .social-tiktok{
-      background:rgba(17,17,17,.05);
-      border-color:rgba(17,17,17,.20);
-      color:#111;
-    }
-    .social-tiktok .social-icon{background:#111}
-    .social-tiktok .tk-cyan{stroke:#25f4ee}
-    .social-tiktok .tk-pink{stroke:#fe2c55}
-    .social-tiktok .tk-main{stroke:#fff}
+    .social-icon svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 
+    /* ===== TABS underline + sticky ===== */
+    .tabs-anchor{height:1px;margin-top:34px}
+    .tabbar{position:sticky;top:0;z-index:30;background:#fff;margin:0 -20px;padding:0 20px}
+    .tabbar-title{
+      display:none;margin:0;padding:13px 0 2px;
+      font-size:19px;line-height:1.35;font-weight:700;color:var(--ink);
+    }
+    .tabbar.stuck .tabbar-title{
+      display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;
+    }
     .tabs{
-      display:grid;
-      grid-template-columns:repeat(4,minmax(0,1fr));
-      gap:3px;
-      margin:26px 0 18px;
-      padding:4px;
-      background:var(--bg);
-      border-radius:12px;
+      display:flex;gap:26px;overflow-x:auto;
+      border-bottom:1.5px solid var(--line);
+      scrollbar-width:none;
     }
+    .tabs::-webkit-scrollbar{display:none}
     .tab{
-      border:0;
-      background:transparent;
-      text-align:center;
-      padding:9px 5px;
-      border-radius:9px;
-      font-size:11px;
-      font-weight:600;
-      color:#7c8598;
-      cursor:pointer;
-      transition:color .15s ease,background .15s ease,box-shadow .15s ease;
+      flex:0 0 auto;position:relative;
+      border:0;background:transparent;
+      padding:14px 0 13px;
+      font-size:15.5px;font-weight:500;color:#7b849a;
+      cursor:pointer;white-space:nowrap;
+      transition:color .15s ease;
     }
-    .tab.active{
-      background:#fff;
-      color:var(--brand);
-      box-shadow:0 2px 8px rgba(18,53,143,.12);
+    .tab.active{color:var(--ink);font-weight:700}
+    .tab.active::after{
+      content:"";position:absolute;left:0;right:0;bottom:-1.5px;
+      height:3px;border-radius:3px 3px 0 0;background:var(--brand);
     }
 
-    .content-section{scroll-margin-top:72px;margin-bottom:28px}
-    .content-section h2{
-      margin:0 0 12px;
-      font-size:16px;
-      font-weight:700;
-      color:var(--ink-strong);
-    }
-    .description p{
-      margin:0 0 12px;
-      font-size:13px;
-      line-height:1.85;
-      color:var(--ink-soft);
-    }
+    .content-section{scroll-margin-top:118px;margin-bottom:36px}
+    .content-section h2{margin:24px 0 12px;font-size:24px;font-weight:700;color:var(--ink)}
+
+    .description p{margin:0 0 14px;font-size:16.5px;line-height:1.75;color:var(--ink-soft)}
     .description p:last-child{margin-bottom:0}
-    .description strong{color:var(--ink)}
 
-    .terms{
-      margin:0;
-      padding:0;
-      list-style:none;
-      display:grid;
-      gap:10px;
-      counter-reset:term;
-    }
+    /* Syarat & ketentuan */
+    .terms{margin:0;padding:0;list-style:none;display:grid;gap:20px;counter-reset:term}
     .terms>li{
-      position:relative;
-      padding:13px 14px 13px 48px;
-      border:1px solid var(--line);
-      border-radius:14px;
-      counter-increment:term;
+      position:relative;padding-left:32px;counter-increment:term;
+      font-size:16px;line-height:1.7;color:var(--ink-soft);
     }
     .terms>li::before{
-      content:counter(term);
-      position:absolute;
-      left:14px;top:13px;
-      width:22px;height:22px;
-      border-radius:50%;
-      background:var(--chip);
-      color:var(--brand);
-      font-size:11px;
-      font-weight:700;
-      display:flex;
-      align-items:center;
-      justify-content:center;
+      content:counter(term);position:absolute;left:0;top:0;
+      font-size:16px;font-weight:700;color:var(--ink);
     }
-    .terms>li>strong{
-      display:block;
-      margin-bottom:4px;
-      font-size:13px;
-      font-weight:700;
-      color:var(--brand);
-    }
-    .terms ul{
-      margin:5px 0 0;
-      padding:0;
-      list-style:none;
-    }
-    .terms ul>li{
-      position:relative;
-      padding-left:15px;
-      margin:4px 0;
-      font-size:12.5px;
-      line-height:1.7;
-      color:var(--ink-soft);
-    }
-    .terms ul>li::before{
-      content:"";
-      position:absolute;
-      left:2px;top:9px;
-      width:5px;height:5px;
-      border-radius:50%;
-      background:#b9c4dd;
-    }
+    .terms>li>strong{display:block;margin-bottom:4px;font-size:16px;font-weight:700;color:var(--ink)}
+    .terms ul{margin:6px 0 0;padding-left:18px;list-style:disc}
+    .terms ul>li{margin:4px 0;font-size:15.5px;line-height:1.7;color:var(--ink-soft)}
 
     .agreement{
-      margin-top:14px;
-      padding:16px;
-      border:1px dashed #d4dcec;
-      border-radius:14px;
-      background:#f7f9fd;
-      font-size:10.5px;
-      font-weight:600;
-      line-height:1.9;
-      letter-spacing:.02em;
-      text-align:center;
-      color:#6b7385;
+      margin-top:26px;font-size:12px;font-weight:600;line-height:1.9;
+      letter-spacing:.02em;text-align:center;color:#6b7385;
     }
 
-    .talent-grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:12px;
-    }
-    .talent-card{
-      position:relative;
-      overflow:hidden;
-      margin:0;
-      border:1px solid #e5e8f0;
-      border-radius:16px;
-      background:#fff;
-      box-shadow:0 8px 24px rgba(20,28,48,.07);
-      transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;
-    }
-    .talent-card:hover{
-      transform:translateY(-2px);
-      border-color:#d7dce8;
-      box-shadow:0 14px 30px rgba(20,28,48,.11);
-    }
-    .talent-poster{
-      display:block;
-      width:100%;
-      aspect-ratio:4 / 5;
-      object-fit:cover;
-      object-position:center;
-      background:#120608;
-    }
-    .talent-info{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:8px;
-      padding:10px 11px 11px;
-      background:linear-gradient(180deg,#fff,#fafbfe);
-    }
-    .talent-info strong{
-      display:block;
-      font-size:11.5px;
-      line-height:1.35;
-      color:var(--ink);
-      letter-spacing:.01em;
-    }
-    .talent-label{
-      flex:0 0 auto;
-      padding:4px 7px;
-      border-radius:999px;
-      background:#f1f3f8;
-      color:#6d7484;
-      font-size:8px;
-      font-weight:800;
-      letter-spacing:.08em;
-      text-transform:uppercase;
-    }
-    .talent-note{margin:12px 0 0;font-size:11px;color:var(--muted)}
+    /* Talent — daftar vertikal */
+    .talent-list{display:grid;gap:18px}
+    .talent-row{display:flex;align-items:center;gap:18px}
+    .talent-row img{width:58px;height:58px;border-radius:12px;object-fit:cover;object-position:center;background:#120608}
+    .talent-row span{font-size:16.5px;font-weight:500;color:var(--ink)}
 
-    .facility-grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:10px;
-    }
-    .facility{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      min-height:54px;
-      padding:9px 10px;
-      border:1px solid var(--line);
-      border-radius:14px;
-      background:#fbfcff;
-      color:var(--ink-soft);
-      font-size:11.5px;
-      font-weight:600;
-    }
-    .facility-icon{
-      width:32px;height:32px;
-      flex:0 0 32px;
-      display:grid;
-      place-items:center;
-      border-radius:9px;
-      background:var(--chip);
-      color:var(--brand);
-      font-size:16px;
-    }
+    /* Fasilitas — 2 kolom, ikon biru */
+    .facility-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px 14px;margin-top:20px}
+    .facility{display:flex;align-items:center;gap:14px;min-width:0;font-size:16px;font-weight:500;color:var(--ink)}
+    .facility svg{flex:0 0 28px;width:28px;height:28px;color:var(--fac)}
 
-    .footer{
-      position:relative;
-      isolation:isolate;
-      overflow:hidden;
-      margin-top:44px;
-      padding:0 0 20px;
-      color:#e9efff;
-    }
-    .footer::before{
-      content:"";
-      display:block;
-      height:1px;
-      margin:0 12% 24px;
-      background:linear-gradient(90deg,transparent,rgba(111,143,255,.65),rgba(255,255,255,.18),rgba(111,143,255,.65),transparent);
-    }
-    .footer-glow{
-      position:absolute;
-      border-radius:50%;
-      pointer-events:none;
-      filter:blur(2px);
-      z-index:-1;
-    }
-    .footer-glow-a{
-      width:260px;height:260px;right:-130px;top:-80px;
-      background:radial-gradient(circle,rgba(65,101,255,.28),transparent 68%);
-    }
-    .footer-glow-b{
-      width:220px;height:220px;left:-130px;bottom:0;
-      background:radial-gradient(circle,rgba(0,199,255,.13),transparent 68%);
-    }
-    .footer-shell{
-      position:relative;
-      overflow:hidden;
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:12px;
-      padding:21px 15px 16px;
-      border:1px solid rgba(120,148,226,.28);
-      border-radius:22px;
-      background:
-        linear-gradient(145deg,rgba(5,14,39,.98),rgba(11,27,64,.98) 55%,rgba(13,31,70,.98)),
-        radial-gradient(circle at 80% 0%,rgba(71,109,239,.18),transparent 40%);
-      box-shadow:0 24px 70px rgba(5,17,48,.22),inset 0 1px 0 rgba(255,255,255,.09),inset 0 -46px 90px -46px rgba(64,98,255,.30);
-    }
-    .footer-edge{
-      position:absolute;
-      top:0;left:12%;right:12%;
-      height:1px;
-      z-index:2;
-      background:linear-gradient(90deg,transparent,rgba(140,168,255,.8) 28%,rgba(255,255,255,.95) 50%,rgba(140,168,255,.8) 72%,transparent);
-      pointer-events:none;
-    }
-    .footer-shell::before{
-      content:"";
-      position:absolute;
-      inset:0;
-      pointer-events:none;
-      opacity:.34;
-      background-image:
-        linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),
-        linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
-      background-size:26px 26px;
-      -webkit-mask-image:linear-gradient(to bottom,black,transparent 88%);
-      mask-image:linear-gradient(to bottom,black,transparent 88%);
-    }
-    .footer-shell::after{
-      content:"";
-      position:absolute;
-      width:420px;height:120px;
-      left:22%;bottom:-105px;
-      border-radius:50%;
-      background:rgba(67,83,224,.18);
-      filter:blur(28px);
-      pointer-events:none;
-    }
-    .footer-main,.footer-panel{position:relative;z-index:1}
-    .footer-main{grid-column:1/-1}
-    .footer-brand-row{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:10px;
-      flex-wrap:wrap;
-    }
-    .footer-brand{
-      display:inline-flex;
-      align-items:center;
-      gap:9px;
-      min-height:48px;
-      padding:7px 14px 7px 8px;
-      border:1px solid rgba(255,255,255,.12);
-      border-radius:15px;
-      background:linear-gradient(135deg,rgba(255,255,255,.09),rgba(255,255,255,.035));
-      box-shadow:inset 0 1px 0 rgba(255,255,255,.1),0 10px 25px rgba(0,0,0,.14);
-      transition:transform .2s ease;
-    }
-    .footer-brand img{
-      width:150px;
-      height:auto;
-      max-height:39px;
-      object-fit:contain;
-      mix-blend-mode:screen;
-    }
-    .footer-badge{
-      display:inline-flex;
-      align-items:center;
-      gap:6px;
-      padding:6px 11px;
-      border:1px solid rgba(98,228,170,.32);
-      border-radius:999px;
-      background:linear-gradient(135deg,rgba(98,228,170,.14),rgba(98,228,170,.04));
-      color:#8df0bd;
-      font-size:8.5px;
-      font-weight:800;
-      letter-spacing:.12em;
-      text-transform:uppercase;
-    }
-    .footer-badge svg{
-      width:11px;height:11px;
-      fill:none;
-      stroke:currentColor;
-      stroke-width:2.6;
-      stroke-linecap:round;
-      stroke-linejoin:round;
-    }
-    .footer-brand-mark{
-      display:grid;
-      grid-template-columns:repeat(3,5px);
-      align-items:end;
-      gap:3px;
-      width:20px;height:20px;
-    }
-    .footer-brand-mark span{
-      display:block;
-      border-radius:3px;
-      background:linear-gradient(180deg,#89a6ff,#315fe8);
-      box-shadow:0 0 12px rgba(75,115,255,.55);
-    }
-    .footer-brand-mark span:nth-child(1){height:9px}
-    .footer-brand-mark span:nth-child(2){height:15px}
-    .footer-brand-mark span:nth-child(3){height:20px}
-    .footer-kicker{
-      display:flex;
-      align-items:center;
-      gap:7px;
-      margin-top:16px;
-      color:#86a0d9;
-      font-size:8px;
-      line-height:1;
-      font-weight:800;
-      letter-spacing:.17em;
-    }
-    .footer-kicker i{
-      width:6px;height:6px;
-      border-radius:50%;
-      background:#62e4aa;
-      box-shadow:0 0 0 4px rgba(98,228,170,.08),0 0 14px rgba(98,228,170,.45);
-    }
-    .footer-tagline{
-      max-width:330px;
-      margin:10px 0 0;
-      color:#aebddc;
-      font-size:11px;
-      line-height:1.72;
-      font-weight:500;
-    }
-    .footer-trust{
-      display:flex;
-      flex-wrap:wrap;
-      gap:6px;
-      margin-top:15px;
-    }
-    .footer-trust span{
-      display:inline-flex;
-      align-items:center;
-      gap:6px;
-      padding:6px 9px;
-      border:1px solid rgba(129,157,226,.14);
-      border-radius:999px;
-      background:rgba(255,255,255,.035);
-      color:#8195bc;
-      font-size:8px;
-      font-weight:700;
-    }
-    .footer-trust b{
-      display:inline-grid;
-      place-items:center;
-      width:14px;height:14px;
-      border-radius:50%;
-      background:rgba(98,228,170,.14);
-      color:#68dda8;
-      font-size:9px;
-      box-shadow:0 0 10px rgba(98,228,170,.22);
-    }
-    .footer-panel{
-      min-width:0;
-      padding:13px 11px;
-      border:1px solid rgba(116,143,213,.13);
-      border-radius:17px;
-      background:rgba(255,255,255,.025);
-      transition:border-color .2s ease,background .2s ease;
-    }
-    .footer-label{
-      display:block;
-      margin:0 0 12px;
-      color:#6f86b8;
-      font-size:8px;
-      font-weight:800;
-      letter-spacing:.16em;
-      text-transform:uppercase;
-    }
-    .footer-links,.footer-support{
-      display:flex;
-      flex-direction:column;
-      align-items:flex-start;
-      gap:8px;
-    }
-    .footer-links a,.footer-support a:not(.footer-cs){
-      display:flex;
-      align-items:center;
-      gap:8px;
-      width:100%;
-      color:#dce6ff;
-      font-size:10.5px;
-      font-weight:600;
-      transition:color .2s ease,transform .2s ease;
-    }
-    .footer-links a:hover,.footer-support a:not(.footer-cs):hover{
-      color:#fff;
-      transform:translateX(3px);
-    }
-    .footer-arrow{
-      display:grid;
-      place-items:center;
-      width:22px;height:22px;
-      flex:0 0 22px;
-      border:1px solid rgba(125,151,221,.17);
-      border-radius:7px;
-      background:rgba(255,255,255,.04);
-      color:#7e9be6;
-      font-size:11px;
-      transition:background .2s ease,border-color .2s ease,color .2s ease;
-    }
-    .f-ico{
-      display:grid;
-      place-items:center;
-      width:25px;height:25px;
-      flex:0 0 25px;
-      border:1px solid rgba(125,151,221,.17);
-      border-radius:8px;
-      background:rgba(255,255,255,.04);
-      color:#8fa9ef;
-      transition:background .2s ease,border-color .2s ease,color .2s ease;
-    }
-    .f-ico svg{width:13px;height:13px}
-    a.footer-cs{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      width:100%;
-      padding:10px 11px;
-      border:1px solid rgba(98,228,170,.30);
-      border-radius:14px;
-      background:linear-gradient(135deg,rgba(98,228,170,.10),rgba(98,228,170,.03));
-      transition:border-color .2s ease,background .2s ease;
-    }
-    a.footer-cs .f-ico{
-      border-color:rgba(98,228,170,.30);
-      background:rgba(98,228,170,.08);
-      color:#7fe6ae;
-    }
-    .footer-cs-body{min-width:0;display:grid;gap:2px}
-    .footer-cs-label{
-      font-size:8px;
-      font-weight:800;
-      letter-spacing:.14em;
-      text-transform:uppercase;
-      color:#6fd8a8;
-    }
-    .footer-cs-number{
-      font-size:14px;
-      font-weight:800;
-      letter-spacing:.03em;
-      line-height:1.25;
-      color:#fff;
-    }
-    .footer-live{
-      display:flex;
-      align-items:center;
-      gap:7px;
-      margin-top:7px;
-      padding-top:9px;
-      width:100%;
-      border-top:1px solid rgba(255,255,255,.07);
-      color:#7185ac;
-      font-size:8px;
-      font-weight:700;
-    }
-    .footer-live i{
-      width:6px;height:6px;
-      border-radius:50%;
-      background:#61e0a4;
-      box-shadow:0 0 0 4px rgba(97,224,164,.08),0 0 10px rgba(97,224,164,.35);
-    }
-    @keyframes livePulse{
-      0%,100%{box-shadow:0 0 0 4px rgba(97,224,164,.10),0 0 10px rgba(97,224,164,.35)}
-      50%{box-shadow:0 0 0 7px rgba(97,224,164,.04),0 0 16px rgba(97,224,164,.55)}
-    }
-    .footer-kicker i,.footer-live i{animation:livePulse 2.4s ease-in-out infinite}
-    .footer-bottom{
-      position:relative;
-      z-index:1;
-      padding:14px 5px 0;
-      text-align:center;
-    }
-    .footer-bottom::before{
-      content:"";
-      display:block;
-      height:1px;
-      margin:0 10% 12px;
-      background:linear-gradient(90deg,transparent,rgba(125,151,221,.25),transparent);
-    }
-    .footer-bottom p{
-      margin:0;
-      color:#65789f;
-      font-size:9px;
-      font-weight:600;
-      letter-spacing:.03em;
-      line-height:1.8;
-    }
-    .footer-bottom strong{color:#8ea6df;font-weight:800;letter-spacing:.08em}
-
+    /* ===== FLOATING BAR BAWAH — INI YANG DIBUAT TRANSPARAN ===== */
     .sticky{
-      position:fixed;
-      left:50%;
-      bottom:0;
-      transform:translateX(-50%);
-      width:100%;
-      max-width:480px;
-      z-index:40;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:14px;
-      padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));
-      background:rgba(255,255,255,.94);
-      -webkit-backdrop-filter:blur(14px);
-      backdrop-filter:blur(14px);
-      border-top:1px solid var(--line);
-      box-shadow:0 -8px 30px rgba(15,23,42,.10);
+      position:fixed;left:0;right:0;bottom:0;z-index:40;
+      display:flex;justify-content:center;
+      padding:0 10px calc(10px + env(safe-area-inset-bottom,0px));
+      pointer-events:none;
     }
-    .purchase-label{display:block;font-size:11px;color:var(--muted)}
-    .purchase-price{
-      display:block;
-      font-size:19px;
-      font-weight:800;
-      color:var(--brand);
-      line-height:1.3;
+    /* Kartu kaca semi-transparan (frosted glass) */
+    .sticky-card{
+      pointer-events:auto;
+      width:100%;max-width:460px;
+      padding:15px 18px 16px;
+      background:rgba(255,255,255,.68);
+      border:1px solid rgba(255,255,255,.55);
+      -webkit-backdrop-filter:blur(16px) saturate(160%);
+      backdrop-filter:blur(16px) saturate(160%);
+      border-radius:16px;
+      box-shadow:0 12px 44px rgba(15,23,42,.16),0 2px 10px rgba(15,23,42,.08);
     }
+    .sticky-row{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:11px}
+    .purchase-label{font-size:15.5px;font-weight:600;color:var(--ink-soft)}
+    .purchase-price{font-size:22px;font-weight:700;color:var(--brand);letter-spacing:.01em}
+    /* Tombol Pesan Sekarang — agak transparan */
     .buy{
-      position:relative;
-      overflow:hidden;
-      flex:0 0 auto;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      min-height:48px;
-      padding:12px 23px;
-      border-radius:12px;
-      background:linear-gradient(180deg,var(--brand-2),var(--brand));
+      display:flex;align-items:center;justify-content:center;
+      width:100%;min-height:54px;border-radius:13px;
+      background:rgba(43,74,207,.68);
+      border:1px solid rgba(255,255,255,.22);
+      -webkit-backdrop-filter:blur(10px);
+      backdrop-filter:blur(10px);
       color:#fff;
-      font-size:14px;
-      font-weight:700;
-      box-shadow:0 8px 20px rgba(18,53,143,.30);
-      transition:transform .15s ease,box-shadow .15s ease;
+      font-size:17.5px;font-weight:700;
+      transition:transform .15s ease,background .15s ease;
     }
-    .buy::before{
-      content:"";
-      position:absolute;
-      top:0;left:-90%;
-      width:45%;height:100%;
-      background:linear-gradient(100deg,transparent,rgba(255,255,255,.38),transparent);
-      transform:skewX(-18deg);
-      animation:sheen 3.4s ease-in-out infinite;
-    }
-    @keyframes sheen{
-      0%,55%{left:-90%}
-      100%{left:140%}
-    }
-    .buy:active{transform:scale(.97)}
+    .buy:active{transform:scale(.985);background:rgba(35,64,189,.78)}
 
     @media (min-width:481px){
       body{padding:0 0 20px}
-      .page{border-radius:0 0 18px 18px;overflow:hidden}
+      .page{border-radius:0 0 18px 18px}
     }
-    @media (max-width:420px){
-      .talent-grid{gap:9px}
-      .talent-info{padding:9px 9px 10px}
-      .talent-info strong{font-size:10.5px}
-      .talent-label{font-size:7px;padding:4px 6px}
-    }
-    @media (max-width:390px){
-      .footer-shell{grid-template-columns:1fr}
-      .footer-main{grid-column:auto}
-      .footer-trust span{font-size:7.5px}
-    }
-    @media (max-width:360px){
-      .icon-btn{width:36px;height:36px}
-      .topbar-actions{gap:7px}
-      .lang{padding-inline:9px}
-      .tab{font-size:10px;padding-inline:2px}
-      .title{font-size:21px}
-      .buy{padding-inline:17px}
-      .purchase-price{font-size:17px}
-      .footer-cs-number{font-size:13px}
+    @media (max-width:380px){
+      .title{font-size:22px}
+      .brand img{height:25px}
+      .lang{padding:9px 14px}
+      .tab{font-size:14px}
+      .tabs{gap:20px}
+      .purchase-price{font-size:20px}
+      .buy{font-size:16.5px}
+      .facility{font-size:15px}
     }
     @media (hover:hover) and (pointer:fine){
-      .buy:hover{transform:translateY(-1px);box-shadow:0 12px 26px rgba(18,53,143,.38)}
+      .buy:hover{background:rgba(35,64,189,.78)}
       .social-item:hover{transform:translateY(-2px)}
-      .tab:hover{color:var(--brand)}
-      .talent-card:hover,.facility:hover{border-color:#c9d6f2}
-      .icon-btn:hover{background:rgba(255,255,255,.2)}
-      .footer-brand:hover{transform:translateY(-1px)}
-      .footer-panel:hover{border-color:rgba(125,152,224,.30);background:rgba(255,255,255,.045)}
-      a.footer-cs:hover{border-color:rgba(98,228,170,.5);background:linear-gradient(135deg,rgba(98,228,170,.16),rgba(98,228,170,.06))}
-      .footer-links a:hover .footer-arrow,
-      .footer-support a:not(.footer-cs):hover .f-ico{
-        background:rgba(255,255,255,.12);
-        border-color:rgba(125,151,221,.38);
-        color:#aac4ff;
-      }
+      .tab:hover{color:var(--ink)}
+      .icon-btn:hover{background:rgba(255,255,255,.24)}
     }
     @media (prefers-reduced-motion:reduce){
       html{scroll-behavior:auto}
@@ -1157,28 +418,26 @@
 <body>
   <header class="topbar">
     <div class="topbar-inner">
-      <div class="topbar-row">
-        <a class="brand" href="index.html" aria-label="Artatix — ke beranda">
-          <img src="logo-saya.png" alt="Artatix" width="200" height="64" decoding="async">
-        </a>
-        <div class="topbar-actions">
-          <span class="lang"><span aria-hidden="true">🇮🇩</span> ID</span>
-          <button class="icon-btn" id="searchToggle" type="button" aria-label="Cari di halaman ini" aria-expanded="false" aria-controls="searchPanel">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-          </button>
-          <button class="icon-btn hamburger" id="menuToggle" type="button" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="menuDrawer">
-            <span class="bars" aria-hidden="true"><span></span><span></span><span></span></span>
-          </button>
-        </div>
-      </div>
-      <div class="search-panel" id="searchPanel" role="search">
-        <div class="search-box">
+      <a class="brand" href="index.html" aria-label="Artatix — ke beranda">
+        <img src="logo-saya.png" alt="Artatix" width="200" height="64" decoding="async">
+      </a>
+      <div class="topbar-actions">
+        <span class="lang"><span class="flag" aria-hidden="true"></span> ID</span>
+        <button class="icon-btn" id="searchToggle" type="button" aria-label="Cari di halaman ini" aria-expanded="false" aria-controls="searchPanel">
           <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-          <input id="searchInput" type="search" placeholder="Cari talent, fasilitas, aturan…" autocomplete="off" enterkeyhint="search" aria-label="Cari di halaman ini">
-          <button class="search-clear" id="searchClear" type="button" aria-label="Bersihkan pencarian" hidden>&times;</button>
-        </div>
-        <div class="search-results" id="searchResults" role="region" aria-label="Hasil pencarian" aria-live="polite"></div>
+        </button>
+        <button class="icon-btn hamburger" id="menuToggle" type="button" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="menuDrawer">
+          <span class="bars" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
       </div>
+    </div>
+    <div class="search-panel" id="searchPanel" role="search">
+      <div class="search-box">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="searchInput" type="search" placeholder="Cari talent, fasilitas, aturan…" autocomplete="off" enterkeyhint="search" aria-label="Cari di halaman ini">
+        <button class="search-clear" id="searchClear" type="button" aria-label="Bersihkan pencarian" hidden>&times;</button>
+      </div>
+      <div class="search-results" id="searchResults" role="region" aria-label="Hasil pencarian" aria-live="polite"></div>
     </div>
   </header>
 
@@ -1218,8 +477,8 @@
     <div class="menu-group">
       <span class="menu-label">Pusat Bantuan</span>
       <div class="menu-nav">
-        <a href="tel:+6282385613854"><span class="f-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.85 21 3 13.15 3 3a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.24.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2Z"/></svg></span><span>+62 823-8561-3854</span></a>
-        <a href="mailto:cs@artatix.co.id"><span class="f-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><span>cs@artatix.co.id</span></a>
+        <a href="tel:+6282385613854"><span class="footer-arrow" aria-hidden="true">↗</span>+62 823-8561-3854</a>
+        <a href="mailto:cs@artatix.co.id"><span class="footer-arrow" aria-hidden="true">↗</span>cs@artatix.co.id</a>
       </div>
     </div>
 
@@ -1232,73 +491,72 @@
     </div>
 
     <main class="content">
-      <div class="badge"><span aria-hidden="true">♫</span> Musik</div>
-      <h1 class="title">TITIK BALIK FESTIVAL 2027</h1>
+      <div class="badge">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+        Musik
+      </div>
+      <h1 class="title">TITIK BALIK FESTIVAL 2027 (VIP Standing &amp; Festival Tribune Tickets)</h1>
 
-      <div class="label">Detail Acara</div>
+      <h2 class="section-title">Detail Acara</h2>
 
       <div class="detail">
         <span class="detail-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="16" rx="3"/><path d="M16 3v4M8 3v4M4 10.5h16"/><path d="M8 14.5h.01M12 14.5h.01M16 14.5h.01M8 17.5h.01M12 17.5h.01"/></svg>
         </span>
         <div class="detail-text">30 Januari 2027</div>
       </div>
 
       <div class="detail">
-        <span class="detail-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <span class="detail-icon round" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 1.8"/></svg>
         </span>
         <div class="detail-text">15:00 – 23:00</div>
       </div>
 
       <div class="detail">
         <span class="detail-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M20 10c0 6-8 11.5-8 11.5S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="2.8"/></svg>
         </span>
         <div class="detail-text">GRAHA CAKRAWALA UNIVERSITAS NEGERI MALANG, Kota Malang, Jawa Timur</div>
       </div>
 
       <div class="label">Penyelenggara</div>
       <div class="organizer">
-        <img src="logo-promotor.jpg" alt="Logo Titik Balik Festival" width="44" height="44" loading="lazy" decoding="async">
+        <img src="logo-promotor.jpg" alt="Logo Titik Balik Festival" width="46" height="46" loading="lazy" decoding="async">
         <strong>Titik Balik Festival</strong>
       </div>
 
       <div class="label">Media Sosial</div>
       <div class="social">
-        <span class="social-item social-instagram">
+        <span class="social-item">
           <span class="social-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
           </span>
           Instagram
         </span>
-        <span class="social-item social-tiktok">
+        <span class="social-item">
           <span class="social-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24">
-              <g class="tk-cyan" transform="translate(-.9,-.9)"><path d="M15 4v10.1a4 4 0 1 1-3-3.87"/><path d="M15 4c.8 2.2 2.2 3.4 5 3.7"/></g>
-              <g class="tk-pink" transform="translate(.9,.9)"><path d="M15 4v10.1a4 4 0 1 1-3-3.87"/><path d="M15 4c.8 2.2 2.2 3.4 5 3.7"/></g>
-              <g class="tk-main"><path d="M15 4v10.1a4 4 0 1 1-3-3.87"/><path d="M15 4c.8 2.2 2.2 3.4 5 3.7"/></g>
-            </svg>
+            <svg viewBox="0 0 24 24"><path d="M15 4v10.1a4 4 0 1 1-3-3.87"/><path d="M15 4c.8 2.2 2.2 3.4 5 3.7"/></svg>
           </span>
           TikTok
         </span>
       </div>
 
-      <nav class="tabs" aria-label="Informasi event">
-        <button class="tab active" type="button" data-tab="deskripsi" aria-controls="deskripsi" aria-current="true">Deskripsi</button>
-        <button class="tab" type="button" data-tab="syarat" aria-controls="syarat">Syarat &amp; Ketentuan</button>
-        <button class="tab" type="button" data-tab="talent" aria-controls="talent">Talent</button>
-        <button class="tab" type="button" data-tab="fasilitas" aria-controls="fasilitas">Fasilitas</button>
-      </nav>
+      <div class="tabs-anchor" id="tabsAnchor" aria-hidden="true"></div>
+      <div class="tabbar" id="tabbar">
+        <p class="tabbar-title" aria-hidden="true">TITIK BALIK FESTIVAL 2027 (VIP Standing &amp; Festival Tribune Tickets)</p>
+        <nav class="tabs" aria-label="Informasi event">
+          <button class="tab active" type="button" data-tab="deskripsi" aria-controls="deskripsi" aria-current="true">Deskripsi</button>
+          <button class="tab" type="button" data-tab="syarat" aria-controls="syarat">Syarat &amp; Ketentuan</button>
+          <button class="tab" type="button" data-tab="talent" aria-controls="talent">Talent</button>
+          <button class="tab" type="button" data-tab="fasilitas" aria-controls="fasilitas">Fasilitas</button>
+        </nav>
+      </div>
 
       <section id="deskripsi" class="content-section" data-panel>
         <h2>Deskripsi</h2>
         <div class="description">
-          <p><strong>TITIK BALIK FESTIVAL 2027</strong> adalah konser musik yang mengangkat cerita dan perjalanan hidup melalui musik. Dengan tema <strong>“Apa Titik Balikmu?”</strong>, setiap individu memiliki kisah dan momen yang menjadi titik balik dalam kehidupannya.</p>
-          <p>Festival ini menjadi ruang untuk mengenang momen terbaik dari setiap proses kehidupan. Dari setiap perjalanan dan pengalaman, selalu ada kisah yang layak dikenang dan dibagikan.</p>
-          <p>Dengan menghadirkan musisi dan talenta pilihan, <strong>TITIK BALIK FESTIVAL 2027</strong> membawa penonton untuk merasakan kembali perjalanan hidup melalui musik dan pengalaman festival.</p>
-          <p>Konsep acara membawa perjalanan <strong>“from nothing to everything”</strong> sebagai gambaran bahwa setiap orang mempunyai proses, cerita, dan titik baliknya masing-masing.</p>
-          <p>Jadikan TITIK BALIK FESTIVAL 2027 sebagai ruang untuk menikmati musik, bertemu orang-orang baru, dan mengenang cerita yang membentuk perjalananmu.</p>
+          <p>TITIK BALIK FESTIVAL 2027 adalah konser musik yang menghadirkan set list early 2000. TITIK BALIK FESTIVAL mengusung tema "Apa Titik Balikmu?" dimana setiap individu memiliki kisah "from nothing to everything", dimana menjadi momen krusial ketika seseorang sudah menjadi pribadi yang sudah lebih matang dan terarah. TITIK BALIK FESTIVAL menargetkan audience di seluruh kalangan, dengan target utama dari kalangan Gen Millenials dan Middle Up, karena kebanyakan dari kalangan tersebut sudah melalui masa krusial di kehidupannya masing-masing. TITIK BALIK FESTIVAL memberikan ruang untuk setiap individu untuk mengenang momen terbaik di setiap proses kehidupannya melalui set list dari line up yang kita hadirkan.</p>
         </div>
       </section>
 
@@ -1307,7 +565,7 @@
         <ol class="terms">
           <li><strong>Pembelian Entry Pass</strong><ul><li>Entry Pass yang valid adalah yang dibeli melalui <strong>artatix.co.id</strong>.</li></ul></li>
           <li><strong>Ketentuan Entry Pass</strong><ul><li>Satu Entry Pass berlaku untuk satu orang.</li></ul></li>
-          <li><strong>Pembelian melalui pihak tidak resmi</strong><ul><li>Panitia dan promotor tidak bertanggung jawab atas kerugian akibat pembelian tiket melalui calo, website/platform yang bukan merupakan mitra resmi penjualan tiket TITIK BALIK FESTIVAL 2027.</li></ul></li>
+          <li><strong>Pembelian melalui pihak tidak resmi</strong><ul><li>Panitia dan Promotor tidak bertanggung jawab atas kerugian akibat pembelian tiket melalui calo, website/platform yang bukan merupakan mitra resmi penjualan tiket TITIK BALIK FESTIVAL 2027.</li></ul></li>
           <li><strong>Tiket hilang atau dicuri</strong><ul><li>Tiket yang hilang atau dicuri tidak akan diganti atau diterbitkan ulang. Keamanan tiket menjadi tanggung jawab pemegang tiket.</li></ul></li>
           <li><strong>Pembatalan atau perubahan acara</strong><ul><li>Panitia acara, promotor, dan pengisi acara tidak bertanggung jawab atas biaya transportasi atau akomodasi penonton apabila acara dibatalkan atau dipindahkan ke hari, tanggal, atau waktu lain.</li></ul></li>
           <li><strong>Keadaan luar biasa</strong><ul><li>Dalam keadaan seperti bencana alam, kerusuhan, perang, wabah, atau keadaan darurat yang diumumkan pemerintah, penyelenggara/promotor berhak membatalkan dan/atau mengubah waktu acara serta tata letak tempat tanpa pemberitahuan sebelumnya.</li></ul></li>
@@ -1331,119 +589,83 @@
         </div>
       </section>
 
-      <section id="talent" class="content-section" data-panel>
-        <h2>Talent</h2>
-        <div class="talent-grid">
-          <figure class="talent-card">
-            <img class="talent-poster" src="reza.jpg" alt="Reza Artamevia" loading="lazy" decoding="async">
-            <figcaption class="talent-info">
-              <strong>Reza Artamevia</strong>
-              <span class="talent-label">Live</span>
-            </figcaption>
-          </figure>
-          <figure class="talent-card">
-            <img class="talent-poster" src="element.jpg" alt="Element" loading="lazy" decoding="async">
-            <figcaption class="talent-info">
-              <strong>ELEMENT</strong>
-              <span class="talent-label">Live</span>
-            </figcaption>
-          </figure>
-          <figure class="talent-card">
-            <img class="talent-poster" src="astrid.jpg" alt="Astrid" loading="lazy" decoding="async">
-            <figcaption class="talent-info">
-              <strong>ASTRID</strong>
-              <span class="talent-label">Live</span>
-            </figcaption>
-          </figure>
-          <figure class="talent-card">
-            <img class="talent-poster" src="kahitna.jpg" alt="Kahitna" loading="lazy" decoding="async">
-            <figcaption class="talent-info">
-              <strong>KAHITNA</strong>
-              <span class="talent-label">Live</span>
-            </figcaption>
-          </figure>
+      <section id="talent" class="content-section" data-panel aria-label="Talent">
+        <h2 class="sr-only">Talent</h2>
+        <div class="talent-list">
+          <div class="talent-row">
+            <img src="reza.jpg" alt="Reza Artamevia" width="58" height="58" loading="lazy" decoding="async">
+            <span>Reza Artamevia</span>
+          </div>
+          <div class="talent-row">
+            <img src="element.jpg" alt="ELEMENT BAND" width="58" height="58" loading="lazy" decoding="async">
+            <span>ELEMENT BAND</span>
+          </div>
+          <div class="talent-row">
+            <img src="kahitna.jpg" alt="KAHITNA" width="58" height="58" loading="lazy" decoding="async">
+            <span>KAHITNA</span>
+          </div>
+          <div class="talent-row">
+            <img src="astrid.jpg" alt="ASTRID" width="58" height="58" loading="lazy" decoding="async">
+            <span>ASTRID</span>
+          </div>
         </div>
-        <p class="talent-note">Talent ditampilkan menggunakan materi gambar resmi yang disediakan.</p>
       </section>
 
       <section id="fasilitas" class="content-section" data-panel>
         <h2>Fasilitas Event</h2>
         <div class="facility-grid">
-          <div class="facility"><span class="facility-icon">🍴</span>Food Court</div>
-          <div class="facility"><span class="facility-icon">ℹ️</span>Pusat Informasi</div>
-          <div class="facility"><span class="facility-icon">✚</span>Medis</div>
-          <div class="facility"><span class="facility-icon">🕌</span>Musholla</div>
-          <div class="facility"><span class="facility-icon">🅿️</span>Area Parkir</div>
-          <div class="facility"><span class="facility-icon">📷</span>Photo Booth</div>
-          <div class="facility"><span class="facility-icon">🚬</span>Area Merokok</div>
-          <div class="facility"><span class="facility-icon">🚻</span>Toilet</div>
+          <div class="facility">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>
+            Food Court
+          </div>
+          <div class="facility">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="currentColor"/><path d="M12 16.8v-5.3" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/><circle cx="12" cy="7.9" r="1.35" fill="#fff"/></svg>
+            Pusat Informasi
+          </div>
+          <div class="facility">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="currentColor"/><path d="M12 7.6v8.8M7.6 12h8.8" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/></svg>
+            Medis
+          </div>
+          <div class="facility">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.4c.3 0 .6.13.8.36C14.6 4.7 17 6.5 17 9.6v.9H7v-.9c0-3.1 2.4-4.9 4.2-6.84.2-.23.5-.36.8-.36Z"/><path d="M4.6 20.2V12h2.5v8.2H4.6Zm12.3 0V12h2.5v8.2h-2.5ZM10.7 20.2v-3.1a1.3 1.3 0 0 1 2.6 0v3.1h-2.6Z"/><rect x="3" y="19.6" width="18" height="2" rx="1"/></svg>
+            Musholla
+          </div>
+          <div class="facility">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4.5" fill="currentColor"/><path d="M9.4 17V7h3.3a3.3 3.3 0 1 1 0 6.6H9.4" fill="none" stroke="#fff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Area Parkir
+          </div>
+          <div class="facility">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.6 7.6h2.5l1.6-2.1h6.6l1.6 2.1h2.5A1.6 1.6 0 0 1 21 9.2v8.7a1.6 1.6 0 0 1-1.6 1.6H4.6A1.6 1.6 0 0 1 3 17.9V9.2a1.6 1.6 0 0 1 1.6-1.6Z" fill="currentColor"/><circle cx="12" cy="13.4" r="3.5" fill="#fff"/><circle cx="12" cy="13.4" r="1.7" fill="currentColor"/></svg>
+            Photo Booth
+          </div>
+          <div class="facility">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="2.5" y="14.6" width="13.5" height="3.8" rx="1" fill="currentColor" stroke="none"/><path d="M18.3 14.6v3.8" stroke-width="2.6"/><path d="M18.9 10.6c0-1.5 1.4-2 1.4-3.3 0-.9-.5-1.6-.9-2.1"/></svg>
+            Area Merokok
+          </div>
+          <div class="facility">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 3h3.2v6.1h5.6a.95.95 0 0 1 .95 1A6.6 6.6 0 0 1 14 15.9v2.6h2.9V21H8.2v-2.5h3.1v-2.6A6.6 6.6 0 0 1 7.05 10.1a.95.95 0 0 1 .95-1H8V3Z"/></svg>
+            Toilet
+          </div>
         </div>
       </section>
-
-      <footer class="footer" aria-label="Informasi Artatix">
-        <div class="footer-glow footer-glow-a" aria-hidden="true"></div>
-        <div class="footer-glow footer-glow-b" aria-hidden="true"></div>
-        <div class="footer-shell">
-          <span class="footer-edge" aria-hidden="true"></span>
-          <div class="footer-main">
-            <div class="footer-brand-row">
-              <a class="footer-brand" href="index.html" aria-label="Artatix — kembali ke beranda">
-                <span class="footer-brand-mark" aria-hidden="true">
-                  <span></span><span></span><span></span>
-                </span>
-                <img src="logo-saya.png" alt="Artatix" width="150" height="39" loading="lazy" decoding="async">
-              </a>
-              <span class="footer-badge"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg> Tiket Resmi</span>
-            </div>
-            <div class="footer-kicker"><i aria-hidden="true"></i> PREMIUM TICKETING EXPERIENCE</div>
-            <p class="footer-tagline">Platform pemesanan tiket yang dibuat untuk checkout lebih cepat, rapi, dan nyaman.</p>
-            <div class="footer-trust" aria-label="Keunggulan layanan">
-              <span><b aria-hidden="true">✓</b> Checkout terarah</span>
-              <span><b aria-hidden="true">✓</b> Bantuan responsif</span>
-              <span><b aria-hidden="true">✓</b> Data tersimpan lokal</span>
-            </div>
-          </div>
-
-          <div class="footer-panel footer-links" aria-label="Navigasi cepat">
-            <span class="footer-label">Explore</span>
-            <a href="index.html"><span class="footer-arrow" aria-hidden="true">↗</span>Beranda</a>
-            <a href="tiket.html"><span class="footer-arrow" aria-hidden="true">↗</span>Pilih Tiket</a>
-            <a href="form.html"><span class="footer-arrow" aria-hidden="true">↗</span>Data Pemesan</a>
-          </div>
-
-          <div class="footer-panel footer-support">
-            <span class="footer-label">Pusat Bantuan</span>
-            <a class="footer-cs" href="tel:+6282385613854">
-              <span class="f-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.85 21 3 13.15 3 3a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.24.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2Z"/></svg></span>
-              <span class="footer-cs-body">
-                <span class="footer-cs-label">Customer Service Artatix</span>
-                <strong class="footer-cs-number">+62 823-8561-3854</strong>
-              </span>
-            </a>
-            <a href="mailto:cs@artatix.co.id"><span class="f-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><span>cs@artatix.co.id</span></a>
-            <div class="footer-live"><i aria-hidden="true"></i><span>Layanan bantuan tersedia</span></div>
-          </div>
-        </div>
-
-        <div class="footer-bottom">
-          <p>© 2026 <strong>Artatix</strong> · Hak cipta dilindungi · Platform tiket resmi TITIK BALIK FESTIVAL 2027</p>
-        </div>
-      </footer>
     </main>
   </div>
 
-  <div class="sticky">
-    <div class="purchase">
-      <span class="purchase-label">Harga mulai dari</span>
-      <strong class="purchase-price">Rp250.000</strong>
+  <div class="sticky" role="region" aria-label="Pembelian tiket">
+    <div class="sticky-card">
+      <div class="sticky-row">
+        <span class="purchase-label">Harga mulai dari</span>
+        <strong class="purchase-price">Rp175.000</strong>
+      </div>
+      <a class="buy" href="tiket.html" aria-label="Pesan tiket TITIK BALIK FESTIVAL 2027">Pesan Sekarang</a>
     </div>
-    <a class="buy" href="tiket.html" aria-label="Pesan tiket TITIK BALIK FESTIVAL 2027">Pesan Sekarang</a>
   </div>
 
   <script>
     (() => {
       const $$ = (s, c = document) => [...c.querySelectorAll(s)];
 
+      /* ---- Tab + auto-aktivasi saat scroll ---- */
       const tabs = $$("[data-tab]");
       const activateTab = (id) => {
         tabs.forEach((tab) => {
@@ -1468,10 +690,20 @@
             .filter((entry) => entry.isIntersecting)
             .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
           if (visible) activateTab(visible.target.id);
-        }, { rootMargin: "-80px 0px -55% 0px", threshold: [0.1, 0.35, 0.6] });
+        }, { rootMargin: "-120px 0px -55% 0px", threshold: [0.1, 0.35, 0.6] });
         panels.forEach((panel) => observer.observe(panel));
       }
 
+      /* ---- Tabbar sticky: tampilkan judul saat menempel di atas ---- */
+      const tabsAnchor = document.getElementById("tabsAnchor");
+      const tabbar = document.getElementById("tabbar");
+      if (tabsAnchor && tabbar && "IntersectionObserver" in window) {
+        new IntersectionObserver(([entry]) => {
+          tabbar.classList.toggle("stuck", !entry.isIntersecting);
+        }, { threshold: 0 }).observe(tabsAnchor);
+      }
+
+      /* ---- Pencarian ---- */
       const escapeHTML = (s) => s.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
       const RX_ESC = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
@@ -1488,7 +720,7 @@
         [".organizer", "Penyelenggara"],
         [".description p", "Deskripsi"],
         [".terms > li", "Syarat & Ketentuan"],
-        [".talent-card", "Talent"],
+        [".talent-row", "Talent"],
         [".facility", "Fasilitas"]
       ].forEach(([sel, label]) => {
         $$(sel).forEach((el) => {
@@ -1588,6 +820,7 @@
             !searchToggle.contains(e.target)) closeSearch();
       });
 
+      /* ---- Drawer menu ---- */
       const menuToggle = document.getElementById("menuToggle");
       const menuDrawer = document.getElementById("menuDrawer");
       const menuBackdrop = document.getElementById("menuBackdrop");
