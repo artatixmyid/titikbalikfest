@@ -8,14 +8,16 @@
 <meta name="color-scheme" content="light">
 <meta name="description" content="Pembayaran QRIS TITIK BALIK FESTIVAL 2027 — scan, bayar, unggah bukti, dan amankan tiketmu di Artatix.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="banner.png">
+<meta name="twitter:image" content="https://artatixmyid.github.io/titikbalikfest/banner.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Artatix">
 <meta property="og:title" content="Pembayaran QRIS | Artatix">
 <meta property="og:description" content="Pembayaran QRIS TITIK BALIK FESTIVAL 2027.">
-<meta property="og:image" content="banner.png">
+<meta property="og:image" content="https://artatixmyid.github.io/titikbalikfest/banner.png">
 <meta property="og:image:alt" content="TITIK BALIK FESTIVAL 2027">
 <meta property="og:locale" content="id_ID">
+<meta property="og:url" content="https://artatixmyid.github.io/titikbalikfest/qris.html">
+<link rel="canonical" href="https://artatixmyid.github.io/titikbalikfest/qris.html">
 <link rel="icon" type="image/png" href="logo-saya.png">
 <link rel="apple-touch-icon" href="logo-saya.png">
 <link rel="prefetch" href="success.html">
@@ -178,7 +180,7 @@ main section:nth-of-type(3){animation-delay:.1s}
 .footer-bottom p{margin:0;font-size:11px;font-weight:500;letter-spacing:.02em;line-height:1.8;color:#8296c2}
 .footer-bottom strong{color:#cdd9f4;font-weight:800}
 @media(max-width:390px){.footer-cols{grid-template-columns:1fr}}
-@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.scan-line{display:none}}
 </style>
 </head>
 <body>
@@ -321,6 +323,11 @@ main section:nth-of-type(3){animation-delay:.1s}
     location.replace('tiket.html');
     return;
   }
+
+  /* Guard anti-submit ganda: jika bukti sudah dikonfirmasi, kembali ke success */
+  let alreadyPaid = false;
+  try { alreadyPaid = Boolean(JSON.parse(localStorage.getItem(KEY.payment) || 'null')); } catch (e) {}
+  if (alreadyPaid) { location.replace('success.html'); return; }
 
   const orderId = localStorage.getItem(KEY.orderId) || ('GF-' + Date.now().toString(36).toUpperCase());
   try { localStorage.setItem(KEY.orderId, orderId); } catch (e) {}
