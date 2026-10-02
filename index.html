@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <title>TITIK BALIK FESTIVAL 2027 (VIP Standing & Festival Tribune Tickets) | Artatix</title>
-  <meta name="theme-color" content="#1d2b74">
+  <meta name="theme-color" content="#2036c9">
   <meta name="color-scheme" content="light">
   <meta name="description" content="TITIK BALIK FESTIVAL 2027 — 30 Januari 2027, 15:00–23:00 di Graha Cakrawala Universitas Negeri Malang, Kota Malang, Jawa Timur.">
   <meta property="og:type" content="website">
@@ -45,7 +45,7 @@
     :root{
       --brand:#2b4acf;        /* biru utama (aksen, harga, tab) */
       --brand-deep:#2340bd;
-      --brand-dark:#1d2b74;   /* BIRU TUA untuk header (sesuai gambar) */
+      --brand-dark:#2036c9;   /* BIRU ROYAL header (sesuai gambar) */
       --ink:#111827;
       --ink-soft:#1f2937;
       --muted:#8a91a5;
@@ -84,7 +84,7 @@
       box-shadow:0 0 40px rgba(18,45,143,.08);
     }
 
-    /* ===== HEADER (BIRU TUA — sesuai gambar) ===== */
+    /* ===== HEADER (BIRU ROYAL — sesuai gambar) ===== */
     .topbar{
       position:relative;
       z-index:50;
@@ -257,14 +257,14 @@
     .section-title{margin:28px 0 14px;font-size:22px;font-weight:700;color:var(--ink)}
     .label{margin:30px 0 14px;font-size:17px;font-weight:500;color:var(--muted)}
 
+    /* Detail acara — ikon filled biru, TANPA kotak latar (sesuai gambar) */
     .detail{display:flex;align-items:center;gap:16px;padding:10px 0}
     .detail-icon{
-      flex:0 0 46px;width:46px;height:46px;
-      border-radius:14px;background:var(--tint);color:var(--brand);
+      flex:0 0 30px;width:30px;height:30px;
+      color:var(--brand);
       display:inline-flex;align-items:center;justify-content:center;
     }
-    .detail-icon.round{border-radius:50%}
-    .detail-icon svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+    .detail-icon svg{width:100%;height:100%;display:block}
     .detail-text{font-size:16px;font-weight:500;color:var(--ink-soft);line-height:1.5}
 
     .organizer{display:flex;align-items:center;gap:14px}
@@ -365,8 +365,8 @@
       pointer-events:auto;
       width:100%;max-width:460px;
       padding:13px 16px 14px;
-      background:rgba(255,255,255,.68);
-      border:1px solid rgba(255,255,255,.55);
+      background:rgba(255,255,255,.85);
+      border:1px solid rgba(255,255,255,.6);
       -webkit-backdrop-filter:blur(16px) saturate(160%);
       backdrop-filter:blur(16px) saturate(160%);
       border-radius:16px;
@@ -375,23 +375,21 @@
     .sticky-row{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:9px}
     .purchase-label{font-size:15px;font-weight:600;color:var(--ink-soft)}
     .purchase-price{font-size:21px;font-weight:700;color:var(--brand);letter-spacing:.01em}
-    /* Tombol "Pesan Sekarang" — LANGSING MEMANJANG, sedikit transparan */
+    /* Tombol "Pesan Sekarang" — biru SOLID (sesuai gambar) */
     .buy{
       display:flex;align-items:center;justify-content:center;
       width:100%;
       min-height:47px;
       padding:9px 16px;
+      border:0;
       border-radius:11px;
-      background:rgba(43,74,207,.78);
-      border:1px solid rgba(255,255,255,.2);
-      -webkit-backdrop-filter:blur(10px);
-      backdrop-filter:blur(10px);
+      background:var(--brand);
       color:#fff;
       font-size:16.5px;font-weight:700;
       letter-spacing:.01em;
       transition:transform .15s ease,background .15s ease;
     }
-    .buy:active{transform:scale(.99);background:rgba(35,64,189,.85)}
+    .buy:active{transform:scale(.99);background:var(--brand-deep)}
 
     @media (min-width:481px){
       body{padding:0 0 20px}
@@ -408,7 +406,7 @@
       .facility{font-size:15px}
     }
     @media (hover:hover) and (pointer:fine){
-      .buy:hover{background:rgba(35,64,189,.85)}
+      .buy:hover{background:var(--brand-deep)}
       .social-item:hover{transform:translateY(-2px)}
       .tab:hover{color:var(--ink)}
       .icon-btn:hover{background:rgba(255,255,255,.24)}
@@ -506,21 +504,37 @@
 
       <div class="detail">
         <span class="detail-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="16" rx="3"/><path d="M16 3v4M8 3v4M4 10.5h16"/><path d="M8 14.5h.01M12 14.5h.01M16 14.5h.01M8 17.5h.01M12 17.5h.01"/></svg>
+          <!-- Kalender filled biru -->
+          <svg viewBox="0 0 24 24">
+            <path fill="currentColor" d="M7.3 1.6c.66 0 1.2.54 1.2 1.2v1.5h7V2.8a1.2 1.2 0 1 1 2.4 0v1.55a3.5 3.5 0 0 1 3.3 3.5v10.5a3.5 3.5 0 0 1-3.5 3.5H6.3a3.5 3.5 0 0 1-3.5-3.5V7.85a3.5 3.5 0 0 1 3.3-3.5V2.8c0-.66.54-1.2 1.2-1.2Z"/>
+            <rect x="2.8" y="8.4" width="18.4" height="2" rx=".6" fill="#fff"/>
+            <g fill="#fff">
+              <circle cx="7.8" cy="13.6" r="1.25"/><circle cx="12" cy="13.6" r="1.25"/><circle cx="16.2" cy="13.6" r="1.25"/>
+              <circle cx="7.8" cy="17.6" r="1.25"/><circle cx="12" cy="17.6" r="1.25"/>
+            </g>
+          </svg>
         </span>
         <div class="detail-text">30 Januari 2027</div>
       </div>
 
       <div class="detail">
-        <span class="detail-icon round" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 1.8"/></svg>
+        <span class="detail-icon" aria-hidden="true">
+          <!-- Jam filled biru -->
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="9.7" fill="currentColor"/>
+            <path d="M12 6.9v5.1l3.3 2" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
         </span>
         <div class="detail-text">15:00 – 23:00</div>
       </div>
 
       <div class="detail">
         <span class="detail-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><path d="M20 10c0 6-8 11.5-8 11.5S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="2.8"/></svg>
+          <!-- Pin lokasi filled biru -->
+          <svg viewBox="0 0 24 24">
+            <path fill="currentColor" d="M12 2a7.7 7.7 0 0 1 7.7 7.7c0 5.4-7.7 12.1-7.7 12.1S4.3 15.1 4.3 9.7A7.7 7.7 0 0 1 12 2Z"/>
+            <circle cx="12" cy="9.7" r="2.9" fill="#fff"/>
+          </svg>
         </span>
         <div class="detail-text">GRAHA CAKRAWALA UNIVERSITAS NEGERI MALANG, Kota Malang, Jawa Timur</div>
       </div>
